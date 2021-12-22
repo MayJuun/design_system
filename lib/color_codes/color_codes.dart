@@ -16,6 +16,7 @@ class MayJuunInternalColors {
 
 //COLOR Grey//
   static Color GRY800 = const Color(0XFFC2C2C2);
+
 //COLOR Aqua//
   static Color AQU700 = const Color(0XFF5BF0F0);
 }
