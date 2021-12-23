@@ -1,3 +1,4 @@
+import 'package:design_system/typography/typography.dart';
 import 'package:flutter/material.dart';
 import 'colors/colors.dart';
 
@@ -42,11 +43,15 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             //All the design system widgets to be tested should be thrown below.
-            const Text(
+            Text(
               'This is the widget displaying now',
+              style: MayJuunType.p2,
+            ),
+            const SizedBox(
+              height: 30,
             ),
             //This is where we display any widget that we are working on.
-            Container(height: 200, width: 200, color: ColorCodes.ORN400)
+            Container(height: 200, width: 200, color: LightThemeColors.negative)
           ],
         ),
       ),

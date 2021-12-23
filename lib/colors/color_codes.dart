@@ -23,7 +23,9 @@ class ColorCodes {
   static Color ORN1K = const Color(0XFFFFEECC);
 
 //COLOR Grey//
+  static Color GRY400 = const Color(0XFF5E5E5E);
   static Color GRY500 = const Color(0XFFBABABA);
+  static Color GRY600 = const Color(0XFFBABABA);
   static Color GRY800 = const Color(0XFFC2C2C2);
   static Color GRY900 = const Color(0XFFF0F0F0);
   static Color GRY1K = const Color(0XFFF8F8F8);
@@ -35,9 +37,9 @@ class ColorCodes {
   static Color AQU1K = const Color(0XFFE3FCFC);
 
 //COLOR White//
-  static Color BLK = const Color(0XFF000000);
-  static Color BLK200 = const Color(0XFF3E3E3E);
-  static Color BLK300 = const Color(0XFF4A4A4A);
+  static Color BLK100 = const Color(0XFF141414);
+  static Color BLK200 = const Color(0XFF222222);
+  static Color BLK300 = const Color(0XFF343434);
 
 //COLOR Black//
   static Color WHT = const Color(0XFFFFFFFF);
