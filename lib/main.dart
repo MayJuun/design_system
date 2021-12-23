@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'color_codes/color_codes.dart';
+import 'colors/colors.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
       ),
       home: const MyHomePage(title: 'Design System Demo'),
     );
@@ -32,14 +31,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,8 +45,8 @@ class _MyHomePageState extends State<MyHomePage> {
             const Text(
               'This is the widget displaying now',
             ),
-            Container(
-                height: 200, width: 200, color: MayJuunInternalColors.ORN400)
+            //This is where we display any widget that we are working on.
+            Container(height: 200, width: 200, color: ColorCodes.ORN400)
           ],
         ),
       ),
