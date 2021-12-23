@@ -25,6 +25,7 @@ class ColorCodes {
 //COLOR Grey//
   static Color GRY400 = const Color(0XFF5E5E5E);
   static Color GRY500 = const Color(0XFFBABABA);
+  static Color GRY600 = const Color(0XFFBABABA);
   static Color GRY800 = const Color(0XFFC2C2C2);
   static Color GRY900 = const Color(0XFFF0F0F0);
   static Color GRY1K = const Color(0XFFF8F8F8);

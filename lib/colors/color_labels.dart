@@ -1,6 +1,6 @@
 import 'package:design_system/colors/color_codes.dart';
 import 'package:flutter/material.dart';
-//This class contains all labled light theme colors.
+//This class contains all labeled light theme colors.
 // ignore_for_file: avoid_classes_with_only_static_members
 
 class LightThemeColors {
@@ -38,7 +38,7 @@ class LightThemeColors {
   static Color contentWarning = ColorCodes.ORN300;
 }
 
-///This class contains all labled dark theme colors.
+///This class contains all labeled dark theme colors.
 class DarkThemeColors {
   //Functional Colors
   static Color negative = ColorCodes.RED300;

@@ -49,22 +49,30 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
+    - family: Inter-ExtraLight
+      fonts:
+        - asset: assets/fonts/Inter-ExtraLight.ttf
+
     - family: Inter-Light
       fonts:
-        - asset: asset/fonts/Inter-Light.ttf
+        - asset: assets/fonts/Inter-Light.ttf
 
     - family: Inter-Regular
       fonts:
-        - asset: asset/fonts/Inter-Regular.ttf
+        - asset: assets/fonts/Inter-Regular.ttf
 
     - family: Inter-Semibold
       fonts:
-        - asset: asset/fonts/Inter-Semibold.ttf
+        - asset: assets/fonts/Inter-Semibold.ttf
+
+    - family: Inter-Medium
+      fonts:
+        - asset: assets/fonts/Inter-Medium.ttf
 
     - family: Inter-Bold
       fonts:
-        - asset: asset/fonts/Inter-Bold.ttf
+        - asset: assets/fonts/Inter-Bold.ttf
 
     - family: Inter-Black
       fonts:
-        - asset: asset/fonts/Inter-Black.ttf
+        - asset: assets/fonts/Inter-Black.ttf
