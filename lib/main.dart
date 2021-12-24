@@ -1,4 +1,6 @@
+import 'package:design_system/buttons/small/buttons_small_theme.dart';
 import 'package:design_system/typography/typography.dart';
+import 'package:design_system/utils/consts.dart';
 import 'package:flutter/material.dart';
 import 'colors/colors.dart';
 
@@ -15,8 +17,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.green,
-      ),
+          primarySwatch: Colors.green,
+          elevatedButtonTheme: ButtonSmall.elevatedButtonTheme()),
       home: const MyHomePage(title: 'Design System Demo'),
     );
   }
@@ -51,7 +53,13 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 30,
             ),
             //This is where we display any widget that we are working on.
-            Container(height: 200, width: 200, color: LightThemeColors.negative)
+            Container(
+                height: 200, width: 200, color: LightThemeColors.negative),
+            const SizedBox(
+              height: 30,
+            ),
+            // ElevatedButton(onPressed: () {}, child: const Text('Press me'))
+            ButtonSmall.elevatedButtonComponent()
           ],
         ),
       ),
