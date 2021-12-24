@@ -45,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
             //All the design system widgets to be tested should be thrown below.
             Text(
               'This is the widget displaying now',
-              style: MayJuunType.p2,
+              style: MayJuunType.heading1(),
             ),
             const SizedBox(
               height: 30,
