@@ -6,6 +6,10 @@ import 'package:design_system/utils/consts.dart';
 import 'package:flutter/material.dart';
 
 class ButtonSmall {
+  ///This method should be used for your app's internal theme where you want to
+  ///have more flexiblity over your elevated button.
+  ///Subsequently, you can call ```ButtonSmall.elevatedButtonComponent()```, ```ButtonMedium.elevatedButtonComponent()```,
+  /// or ```ButtonLarge.elevatedButtonComponent()``` to have the desired and pre-fedefined button size
   static ElevatedButtonThemeData elevatedButtonTheme() {
     return ElevatedButtonThemeData(
       style: ButtonStyle(
