@@ -5,11 +5,18 @@ import 'package:flutter/material.dart';
 ///This class contains all the color codes found in the official MayJuun Design System.
 ///Design URL: https://www.figma.com/file/yNUOneqHN92b5QkMCnleVb/MayJuun-Design-System?node-id=0%3A1
 class ColorCodes {
-//COLOR RED//
-  static Color RED50 = const Color(0XFF420700);
+//COLOR RED DONE//
+  static Color RED50 = const Color(0XFF4A0800);
+  static Color RED100 = const Color(0XFF570A00);
+  static Color RED200 = const Color(0XFF850F00);
   static Color RED300 = const Color(0XFFAB1300);
   static Color RED400 = const Color(0XFFE21900);
-  static Color RED1K = const Color(0XFFFFD2CC);
+  static Color RED500 = const Color(0XFFFF250A);
+  static Color RED600 = const Color(0XFFFF533D);
+  static Color RED700 = const Color(0XFFFF8070);
+  static Color RED800 = const Color(0XFFFFADA3);
+  static Color RED900 = const Color(0XFFFFD2CC);
+  static Color RED1K = const Color(0XFFFFE8E5);
 
 //COLOR Green//
   static Color GRN200 = const Color(0XFF05944F);
