@@ -1,6 +1,5 @@
-import 'package:design_system/buttons/small/buttons_small_theme.dart';
+import 'package:design_system/buttons/buttons.dart';
 import 'package:design_system/typography/typography.dart';
-import 'package:design_system/utils/consts.dart';
 import 'package:flutter/material.dart';
 import 'colors/colors.dart';
 
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
           primarySwatch: Colors.green,
-          elevatedButtonTheme: ButtonSmall.elevatedButtonTheme()),
+          elevatedButtonTheme: MayJuunButtonTheme.elevatedButtonTheme()),
       home: const MyHomePage(title: 'Design System Demo'),
     );
   }
@@ -41,8 +40,9 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: ListView(
+          padding: const EdgeInsets.all(20),
+          // mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             //All the design system widgets to be tested should be thrown below.
             Text(
@@ -59,7 +59,39 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 30,
             ),
             // ElevatedButton(onPressed: () {}, child: const Text('Press me'))
-            ButtonSmall.elevatedButtonComponent()
+            ButtonSmall.elevatedButtonComponent(
+              prefix: Icons.ac_unit,
+              suffix: Icons.ac_unit,
+              child: Text(
+                'Small',
+                style: MayJuunType.label3(),
+              ),
+              onPressed: () {},
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            ButtonMedium.elevatedButtonComponent(
+              prefix: Icons.ac_unit,
+              suffix: Icons.ac_unit,
+              child: Text(
+                'Medium',
+                style: MayJuunType.label3(),
+              ),
+              onPressed: () {},
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            ButtonLarge.elevatedButtonComponent(
+              prefix: Icons.ac_unit,
+              suffix: Icons.ac_unit,
+              child: Text(
+                'Large',
+                style: MayJuunType.label3(),
+              ),
+              onPressed: () {},
+            ),
           ],
         ),
       ),

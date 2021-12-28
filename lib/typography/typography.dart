@@ -21,7 +21,7 @@ class MayJuunType {
       TextStyle(
           fontSize: 72,
           color: color ?? LightThemeColors.contentPrimary,
-          fontFamily: 'Inter-ExtraLight',
+          fontFamily: 'Inter-Variable',
           fontWeight: fontWeight ?? displayWeight);
 
   ///Outputs the corresponding font size and properties.
@@ -32,7 +32,7 @@ class MayJuunType {
       TextStyle(
           fontSize: 58,
           color: color ?? LightThemeColors.contentPrimary,
-          fontFamily: 'Inter-ExtraLight',
+          fontFamily: 'Inter-Variable',
           fontWeight: fontWeight ?? displayWeight);
 
   ///Outputs the corresponding font size and properties.
@@ -43,7 +43,7 @@ class MayJuunType {
       TextStyle(
           fontSize: 45,
           color: color ?? LightThemeColors.contentPrimary,
-          fontFamily: 'Inter-ExtraLight',
+          fontFamily: 'Inter-Variable',
           fontWeight: fontWeight ?? displayWeight);
 
   ///Outputs the corresponding font size and properties.
@@ -54,7 +54,7 @@ class MayJuunType {
       TextStyle(
           fontSize: 36,
           color: color ?? LightThemeColors.contentPrimary,
-          fontFamily: 'Inter-ExtraLight',
+          fontFamily: 'Inter-Variable',
           fontWeight: fontWeight ?? displayWeight);
 
   // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -65,41 +65,41 @@ class MayJuunType {
       TextStyle(
           fontSize: 40,
           color: color ?? LightThemeColors.contentPrimary,
-          fontFamily: 'Inter-ExtraLight',
+          fontFamily: 'Inter-Variable',
           fontWeight: fontWeight ?? headingWeight);
 
   static TextStyle heading2({Color? color, FontWeight? fontWeight}) =>
       TextStyle(
           fontSize: 36,
           color: color ?? LightThemeColors.contentPrimary,
-          fontFamily: 'Inter-ExtraLight',
+          fontFamily: 'Inter-Variable',
           fontWeight: fontWeight ?? headingWeight);
 
   static TextStyle heading3({Color? color, FontWeight? fontWeight}) =>
       TextStyle(
           fontSize: 32,
           color: color ?? LightThemeColors.contentPrimary,
-          fontFamily: 'Inter-ExtraLight',
+          fontFamily: 'Inter-Variable',
           fontWeight: fontWeight ?? headingWeight);
 
   static TextStyle heading4({Color? color, FontWeight? fontWeight}) =>
       TextStyle(
           fontSize: 28,
           color: color ?? LightThemeColors.contentPrimary,
-          fontFamily: 'Inter-ExtraLight',
+          fontFamily: 'Inter-Variable',
           fontWeight: fontWeight ?? headingWeight);
 
   static TextStyle heading5({Color? color, FontWeight? fontWeight}) =>
       TextStyle(
           fontSize: 24,
           color: color ?? LightThemeColors.contentPrimary,
-          fontFamily: 'Inter-ExtraLight',
+          fontFamily: 'Inter-Variable',
           fontWeight: fontWeight ?? headingWeight);
   static TextStyle heading6({Color? color, FontWeight? fontWeight}) =>
       TextStyle(
           fontSize: 20,
           color: color ?? LightThemeColors.contentPrimary,
-          fontFamily: 'Inter-ExtraLight',
+          fontFamily: 'Inter-Variable',
           fontWeight: fontWeight ?? headingWeight);
 
   // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -108,22 +108,22 @@ class MayJuunType {
   static TextStyle label1({Color? color, FontWeight? fontWeight}) => TextStyle(
       fontSize: 18,
       color: color ?? LightThemeColors.contentPrimary,
-      fontFamily: 'Inter-ExtraLight',
+      fontFamily: 'Inter-Variable',
       fontWeight: fontWeight ?? labelWeight);
   static TextStyle label2({Color? color, FontWeight? fontWeight}) => TextStyle(
       fontSize: 16,
       color: color ?? LightThemeColors.contentPrimary,
-      fontFamily: 'Inter-ExtraLight',
+      fontFamily: 'Inter-Variable',
       fontWeight: fontWeight ?? labelWeight);
   static TextStyle label3({Color? color, FontWeight? fontWeight}) => TextStyle(
       fontSize: 14,
       color: color ?? LightThemeColors.contentPrimary,
-      fontFamily: 'Inter-ExtraLight',
+      fontFamily: 'Inter-Variable',
       fontWeight: fontWeight ?? labelWeight);
   static TextStyle label4({Color? color, FontWeight? fontWeight}) => TextStyle(
       fontSize: 12,
       color: color ?? LightThemeColors.contentPrimary,
-      fontFamily: 'Inter-ExtraLight',
+      fontFamily: 'Inter-Variable',
       fontWeight: fontWeight ?? labelWeight);
 
   // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -132,21 +132,21 @@ class MayJuunType {
   static TextStyle p1({Color? color, FontWeight? fontWeight}) => TextStyle(
       fontSize: 18,
       color: color ?? LightThemeColors.contentPrimary,
-      fontFamily: 'Inter-ExtraLight',
+      fontFamily: 'Inter-Variable',
       fontWeight: fontWeight ?? paragrapghWeight);
   static TextStyle p2({Color? color, FontWeight? fontWeight}) => TextStyle(
       fontSize: 16,
       color: color ?? LightThemeColors.contentPrimary,
-      fontFamily: 'Inter-ExtraLight',
+      fontFamily: 'Inter-Variable',
       fontWeight: fontWeight ?? paragrapghWeight);
   static TextStyle p3({Color? color, FontWeight? fontWeight}) => TextStyle(
       fontSize: 14,
       color: color ?? LightThemeColors.contentPrimary,
-      fontFamily: 'Inter-ExtraLight',
+      fontFamily: 'Inter-Variable',
       fontWeight: fontWeight ?? paragrapghWeight);
   static TextStyle p4({Color? color, FontWeight? fontWeight}) => TextStyle(
       fontSize: 12,
       color: color ?? LightThemeColors.contentPrimary,
-      fontFamily: 'Inter-ExtraLight',
+      fontFamily: 'Inter-Variable',
       fontWeight: fontWeight ?? paragrapghWeight);
 }
