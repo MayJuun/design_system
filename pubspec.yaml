@@ -76,3 +76,7 @@ flutter:
     - family: Inter-Black
       fonts:
         - asset: assets/fonts/Inter-Black.ttf
+
+    - family: Inter-Variable
+      fonts:
+        - asset: assets/fonts/Inter-Variable.ttf

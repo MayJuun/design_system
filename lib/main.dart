@@ -59,7 +59,15 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 30,
             ),
             // ElevatedButton(onPressed: () {}, child: const Text('Press me'))
-            ButtonSmall.elevatedButtonComponent()
+            ButtonSmall.elevatedButtonComponent(
+              prefix: Icons.ac_unit,
+              suffix: Icons.ac_unit,
+              child: Text(
+                'Press me',
+                style: MayJuunType.label3(),
+              ),
+              onPressed: () {},
+            )
           ],
         ),
       ),
