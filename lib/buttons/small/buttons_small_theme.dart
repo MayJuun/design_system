@@ -13,13 +13,8 @@ class ButtonSmall {
   static ElevatedButtonThemeData elevatedButtonTheme() {
     return ElevatedButtonThemeData(
       style: ButtonStyle(
-        fixedSize: MaterialStateProperty.all(
-          const Size(350, 36),
-        ),
-
         mouseCursor:
             MaterialStateProperty.all<MouseCursor>(SystemMouseCursors.click),
-
         enableFeedback: true,
         // shape: MaterialStateProperty.all<OutlinedBorder>(const CircleBorder()),
         textStyle: MaterialStateProperty.all<TextStyle>(MayJuunType.label3()),
@@ -44,16 +39,32 @@ class ButtonSmall {
     );
   }
 
-  static ElevatedButton elevatedButtonComponent() {
+  ///This function takes in x params: height, width, prefix-Icon, Suffix Icon, button title of type <widget>
+  static ElevatedButton elevatedButtonComponent({
+    Widget? buttonTitle,
+    double? height,
+    double? width,
+    IconData? prefix,
+    IconData? suffix,
+  }) {
     return ElevatedButton(
-        onPressed: () {},
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Icon(Icons.lock, size: 15),
-            SpaceConsts.horizontalOne,
-            const Text('Press me')
-          ],
-        ));
+      onPressed: () {},
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Icon(Icons.lock, size: 15),
+          SpaceConsts.horizontalOne,
+          Text(
+            'Press me',
+            style: MayJuunType.label3(),
+          )
+        ],
+      ),
+      style: ButtonStyle(
+        fixedSize: MaterialStateProperty.all(
+          const Size(350, 36),
+        ),
+      ),
+    );
   }
 }
