@@ -39,25 +39,34 @@ class ButtonSmall {
     );
   }
 
-  ///This function takes in x params: height, width, prefix-Icon, Suffix Icon, button title of type <widget>
+  ///This function takes in params: [child] of type required widget,
+  ///
+  ///[height] of type double? , [width] of type double?, [prefix] of type IconData?,
+  ///
+  ///[suffix] of type IconData and
+  ///
+  ///[onPressed] of type required void Function?
   static ElevatedButton elevatedButtonComponent({
-    Widget? buttonTitle,
+    required Widget? child,
     double? height,
     double? width,
     IconData? prefix,
     IconData? suffix,
+    required void Function() onPressed,
   }) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: onPressed,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Icon(Icons.lock, size: 15),
+          Icon(prefix, size: 15),
           SpaceConsts.horizontalOne,
           Text(
             'Press me',
             style: MayJuunType.label3(),
-          )
+          ),
+          SpaceConsts.horizontalOne,
+          Icon(suffix, size: 15),
         ],
       ),
       style: ButtonStyle(
