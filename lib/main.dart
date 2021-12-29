@@ -137,6 +137,39 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               onPressed: () {},
             ),
+            const SizedBox(
+              height: 30,
+            ),
+            ButtonLarge.pillButton(
+              prefix: Icons.lock,
+              suffix: Icons.arrow_downward_outlined,
+              // width: 150,
+              child: Text(
+                'Medium Tag here',
+                style: MayJuunType.label3(),
+              ),
+              onPressed: () {},
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            ButtonSmall.squareButton(
+              child: Text(
+                '01',
+                style: MayJuunType.label3(),
+              ),
+              onPressed: () {},
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            ButtonSmall.roundButton(
+              child: Text(
+                '01',
+                style: MayJuunType.label3(),
+              ),
+              onPressed: () {},
+            ),
           ],
         ),
       ),
