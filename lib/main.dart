@@ -1,4 +1,4 @@
-import 'package:design_system/buttons/buttons.dart';
+import 'package:design_system/buttons/buttons.convinience.dart';
 import 'package:design_system/typography/typography.dart';
 import 'package:flutter/material.dart';
 import 'colors/colors.dart';
@@ -60,20 +60,23 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             // ElevatedButton(onPressed: () {}, child: const Text('Press me'))
             ButtonSmall.elevatedButtonComponent(
-              prefix: Icons.ac_unit,
-              suffix: Icons.ac_unit,
+              prefix: Icons.lock,
+              suffix: Icons.arrow_downward_outlined,
               child: Text(
                 'Small',
                 style: MayJuunType.label3(),
               ),
-              onPressed: () {},
+              onPressed: () {
+                debugPrint('running');
+              },
             ),
             const SizedBox(
               height: 30,
             ),
+
             ButtonMedium.elevatedButtonComponent(
-              prefix: Icons.ac_unit,
-              suffix: Icons.ac_unit,
+              prefix: Icons.lock,
+              suffix: Icons.arrow_downward_outlined,
               child: Text(
                 'Medium',
                 style: MayJuunType.label3(),
@@ -83,11 +86,53 @@ class _MyHomePageState extends State<MyHomePage> {
             const SizedBox(
               height: 30,
             ),
+
             ButtonLarge.elevatedButtonComponent(
               prefix: Icons.ac_unit,
               suffix: Icons.ac_unit,
               child: Text(
                 'Large',
+                style: MayJuunType.label3(),
+              ),
+              onPressed: () {},
+            ),
+
+            const SizedBox(
+              height: 30,
+            ),
+            ButtonSmall.pillButton(
+              prefix: Icons.lock,
+              suffix: Icons.arrow_downward_outlined,
+              // width: 150,
+              child: Text(
+                'Small Tag here',
+                style: MayJuunType.label3(),
+              ),
+              onPressed: () {},
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+
+            ButtonMedium.pillButton(
+              prefix: Icons.lock,
+              suffix: Icons.arrow_downward_outlined,
+              // width: 150,
+              child: Text(
+                'Medium Tag here',
+                style: MayJuunType.label3(),
+              ),
+              onPressed: () {},
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            ButtonLarge.pillButton(
+              prefix: Icons.lock,
+              suffix: Icons.arrow_downward_outlined,
+              // width: 150,
+              child: Text(
+                'Medium Tag here',
                 style: MayJuunType.label3(),
               ),
               onPressed: () {},

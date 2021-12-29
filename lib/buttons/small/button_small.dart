@@ -4,7 +4,7 @@ import 'package:design_system/utils/consts.dart';
 import 'package:flutter/material.dart';
 
 class ButtonSmall {
-  ///This function takes in params: [child] of type required widget,
+  ///This method takes in params: [child] of type required widget,
   ///
   ///[height] of type double? , [width] of type double?, [prefix] of type IconData?,
   ///
@@ -17,7 +17,7 @@ class ButtonSmall {
     double? width,
     IconData? prefix,
     IconData? suffix,
-    required void Function() onPressed,
+    required void Function()? onPressed,
   }) {
     return ElevatedButton(
       onPressed: onPressed,
@@ -36,6 +36,53 @@ class ButtonSmall {
           Size(width ?? 350, height ?? 36),
         ),
       ),
+    );
+  }
+
+  ///This method takes in params: [child] of type required widget,
+  ///
+  ///[height] of type double? , [width] of type double?, [prefix] of type IconData?,
+  ///
+  ///[suffix] of type IconData and
+  ///
+  ///[onPressed] of type required void Function?
+  ///
+  static Row pillButton({
+    required Widget child,
+    double? height,
+    double? width,
+    IconData? prefix,
+    IconData? suffix,
+    required void Function() onPressed,
+  }) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Align(
+          child: SizedBox(
+            height: height ?? 36,
+            width: width,
+            child: ElevatedButton(
+              onPressed: onPressed,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(prefix, size: 15),
+                  SpaceConsts.horizontalOne,
+                  child,
+                  SpaceConsts.horizontalOne,
+                  Icon(suffix, size: 15),
+                ],
+              ),
+              style: ButtonStyle(
+                enableFeedback: true,
+                shape: MaterialStateProperty.all<OutlinedBorder>(
+                    const StadiumBorder()),
+              ),
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
