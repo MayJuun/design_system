@@ -5,12 +5,22 @@ import 'package:design_system/utils/consts.dart';
 import 'package:flutter/material.dart';
 
 //TODO: Activate the selected and unselected tag
+
+///Returns a tag widget with a default postive color.
+///
+///Constructors are
+///
+/// [color] to define the colors of the borders and background of the tag
+/// [dismissable] default is false. Defines whether the tag is a dissmissable type.
+/// [onCancel] fires when the tag is dissmied.
+/// [type] default is outline. Defines whether the tag is an outline or a fill.
 class TagSmall extends StatefulWidget {
   final Color? color;
   final bool? dismissable;
   // final bool? isSelected;
   final void Function()? onCancel;
   final TagTypes? type;
+  // ignore: sort_constructors_first
   const TagSmall({
     this.color,
     this.dismissable,
