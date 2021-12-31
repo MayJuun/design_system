@@ -1,5 +1,5 @@
-import 'package:design_system/colors/color_codes.dart';
 import 'package:flutter/material.dart';
+import 'color_codes.dart';
 //This class contains all labeled light theme colors.
 // ignore_for_file: avoid_classes_with_only_static_members
 

@@ -1,7 +1,8 @@
-import 'package:design_system/buttons/buttons.convinience.dart';
-import 'package:design_system/typography/typography.dart';
+import 'package:design_system/src/buttons/buttons.convinience.dart';
+import 'package:design_system/src/tags/tags.convinience.dart';
+import 'package:design_system/src/typography/typography.dart';
 import 'package:flutter/material.dart';
-import 'colors/colors.dart';
+import 'src/colors/colors.convinience.dart';
 
 void main() {
   runApp(const MyApp());
@@ -54,7 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             //This is where we display any widget that we are working on.
             Container(
-                height: 200, width: 200, color: LightThemeColors.negative),
+                height: 200, width: 100, color: LightThemeColors.negative),
             const SizedBox(
               height: 30,
             ),
@@ -169,6 +170,43 @@ class _MyHomePageState extends State<MyHomePage> {
                 style: MayJuunType.label3(),
               ),
               onPressed: () {},
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            TagsSmall(
+              child: 'Small',
+              color: Colors.purple,
+              dismissable: true,
+              type: TagTypes.outline,
+              onCancel: () {
+                debugPrint('cancelled');
+              },
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+
+            TagsMedium(
+              child: 'Medium',
+              color: Colors.purple,
+              dismissable: true,
+              type: TagTypes.outline,
+              onCancel: () {
+                debugPrint('cancelled');
+              },
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            TagsLarge(
+              child: 'Large',
+              color: Colors.purple,
+              dismissable: true,
+              type: TagTypes.outline,
+              onCancel: () {
+                debugPrint('cancelled');
+              },
             ),
           ],
         ),
