@@ -1,5 +1,6 @@
 import 'package:design_system/buttons/buttons.convinience.dart';
 import 'package:design_system/tags/small/tags_small.dart';
+import 'package:design_system/tags/tag_enums.dart';
 import 'package:design_system/typography/typography.dart';
 import 'package:flutter/material.dart';
 import 'colors/colors.dart';
@@ -175,8 +176,9 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 30,
             ),
             TagSmall(
-              color: Colors.orange,
+              color: Colors.purple,
               dismissable: true,
+              type: TagTypes.outline,
               onCancel: () {
                 debugPrint('cancelled');
               },

@@ -4,7 +4,7 @@ import 'package:design_system/typography/typography.dart';
 import 'package:design_system/utils/consts.dart';
 import 'package:flutter/material.dart';
 
-//TODO: Activated the selected and unselected tag
+//TODO: Activate the selected and unselected tag
 class TagSmall extends StatefulWidget {
   final Color? color;
   final bool? dismissable;
@@ -27,6 +27,34 @@ class TagSmall extends StatefulWidget {
 class _TagSmallState extends State<TagSmall> {
   bool isDismissed = false;
 
+  Color backgroundColor({Color? color, TagTypes? type}) {
+    if (color == null) {
+      if (type == TagTypes.filled) {
+        return LightThemeColors.backgroundPositive.withOpacity(.2);
+      } else {
+        return Colors.transparent;
+      }
+    } else if (type == TagTypes.outline) {
+      return Colors.transparent;
+    } else {
+      return color.withOpacity(.2);
+    }
+  }
+
+  Color borderColor({Color? color, TagTypes? type}) {
+    if (color == null) {
+      if (type == TagTypes.filled) {
+        return Colors.transparent;
+      } else {
+        return LightThemeColors.backgroundPositive.withOpacity(.2);
+      }
+    } else if (type == TagTypes.outline) {
+      return color.withOpacity(.2);
+    } else {
+      return Colors.transparent;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     if (!isDismissed) {
@@ -34,13 +62,12 @@ class _TagSmallState extends State<TagSmall> {
         child: Container(
           padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(
-              color: widget.color == null
-                  ? LightThemeColors.backgroundPositive.withOpacity(.2)
-                  : widget.color!.withOpacity(.2),
+              color: backgroundColor(color: widget.color, type: widget.type),
               borderRadius: BorderRadius.circular(100),
               border: Border.all(
-                  width: 1,
-                  color: widget.color ?? LightThemeColors.backgroundPositive)),
+                width: 2,
+                color: borderColor(color: widget.color, type: widget.type),
+              )),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
