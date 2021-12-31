@@ -50,7 +50,7 @@ class ButtonSmall {
   ///
   ///[onPressed] of type required void Function?
   ///
-  static Row pillButton({
+  static Widget pillButton({
     required Widget child,
     double? height,
     double? width,
@@ -58,11 +58,11 @@ class ButtonSmall {
     IconData? suffix,
     required void Function() onPressed,
   }) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Align(
-          child: SizedBox(
+    return Align(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          SizedBox(
             height: height ?? 36,
             width: width,
             child: ElevatedButton(
@@ -84,8 +84,8 @@ class ButtonSmall {
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 

@@ -1,4 +1,5 @@
 import 'package:design_system/buttons/buttons.convinience.dart';
+import 'package:design_system/tags/small/tags_small.dart';
 import 'package:design_system/typography/typography.dart';
 import 'package:flutter/material.dart';
 import 'colors/colors.dart';
@@ -54,7 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             //This is where we display any widget that we are working on.
             Container(
-                height: 200, width: 200, color: LightThemeColors.negative),
+                height: 200, width: 100, color: LightThemeColors.negative),
             const SizedBox(
               height: 30,
             ),
@@ -170,6 +171,10 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               onPressed: () {},
             ),
+            const SizedBox(
+              height: 30,
+            ),
+            TagSmall.tagOutline(),
           ],
         ),
       ),
