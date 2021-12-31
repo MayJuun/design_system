@@ -1,12 +1,12 @@
 // ignore_for_file: avoid_classes_with_only_static_members
 
-import 'package:design_system/buttons/universal/round_button.dart';
-import 'package:design_system/buttons/universal/square_button.dart';
-import 'package:design_system/utils/consts.dart';
+import 'package:design_system/src/buttons/universal/round_button.dart';
+import 'package:design_system/src/buttons/universal/square_button.dart';
+import 'package:design_system/src/utils/consts.dart';
 import 'package:flutter/material.dart';
 
-class ButtonMedium {
-  ///This function takes in params: [child] of type required widget,
+class ButtonSmall {
+  ///This method takes in params: [child] of type required widget,
   ///
   ///[height] of type double? , [width] of type double?, [prefix] of type IconData?,
   ///
@@ -19,7 +19,7 @@ class ButtonMedium {
     double? width,
     IconData? prefix,
     IconData? suffix,
-    required void Function() onPressed,
+    required void Function()? onPressed,
   }) {
     return ElevatedButton(
       onPressed: onPressed,
@@ -35,12 +35,13 @@ class ButtonMedium {
       ),
       style: ButtonStyle(
         fixedSize: MaterialStateProperty.all(
-          Size(width ?? 350, height ?? 48),
+          Size(width ?? 350, height ?? 36),
         ),
       ),
     );
   }
 
+//PILL BUTTON
   ///This method takes in params: [child] of type required widget,
   ///
   ///[height] of type double? , [width] of type double?, [prefix] of type IconData?,
@@ -49,7 +50,7 @@ class ButtonMedium {
   ///
   ///[onPressed] of type required void Function?
   ///
-  static Row pillButton({
+  static Widget pillButton({
     required Widget child,
     double? height,
     double? width,
@@ -57,12 +58,12 @@ class ButtonMedium {
     IconData? suffix,
     required void Function() onPressed,
   }) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Align(
-          child: SizedBox(
-            height: height ?? 40,
+    return Align(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          SizedBox(
+            height: height ?? 36,
             width: width,
             child: ElevatedButton(
               onPressed: onPressed,
@@ -83,8 +84,8 @@ class ButtonMedium {
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 
@@ -95,7 +96,6 @@ class ButtonMedium {
   ///
   ///[onPressed] of type required void Function?
   ///
-
   static Widget squareButton(
       {required child, required void Function() onPressed}) {
     return squareButtonComponent(child: child, onPressed: onPressed);
@@ -108,7 +108,6 @@ class ButtonMedium {
   ///
   ///[onPressed] of type required void Function?
   ///
-
   static Widget roundButton(
       {required child, required void Function() onPressed}) {
     return roundButtonComponent(child: child, onPressed: onPressed);

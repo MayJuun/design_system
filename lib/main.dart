@@ -1,9 +1,8 @@
-import 'package:design_system/buttons/buttons.convinience.dart';
-import 'package:design_system/tags/small/tags_small.dart';
-import 'package:design_system/tags/tag_enums.dart';
-import 'package:design_system/typography/typography.dart';
+import 'package:design_system/src/buttons/buttons.convinience.dart';
+import 'package:design_system/src/tags/tags.convinience.dart';
+import 'package:design_system/src/typography/typography.dart';
 import 'package:flutter/material.dart';
-import 'colors/colors.dart';
+import 'src/colors/colors.convinience.dart';
 
 void main() {
   runApp(const MyApp());
@@ -175,7 +174,8 @@ class _MyHomePageState extends State<MyHomePage> {
             const SizedBox(
               height: 30,
             ),
-            TagSmall(
+            TagsSmall(
+              child: 'Small',
               color: Colors.purple,
               dismissable: true,
               type: TagTypes.outline,
@@ -186,12 +186,27 @@ class _MyHomePageState extends State<MyHomePage> {
             const SizedBox(
               height: 30,
             ),
-            ButtonSmall.roundButton(
-              child: Text(
-                '01',
-                style: MayJuunType.label3(),
-              ),
-              onPressed: () {},
+
+            TagsMedium(
+              child: 'Medium',
+              color: Colors.purple,
+              dismissable: true,
+              type: TagTypes.outline,
+              onCancel: () {
+                debugPrint('cancelled');
+              },
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            TagsLarge(
+              child: 'Large',
+              color: Colors.purple,
+              dismissable: true,
+              type: TagTypes.outline,
+              onCancel: () {
+                debugPrint('cancelled');
+              },
             ),
           ],
         ),

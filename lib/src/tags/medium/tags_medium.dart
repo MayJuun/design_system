@@ -1,7 +1,7 @@
-import 'package:design_system/colors/colors.dart';
-import 'package:design_system/tags/tag_enums.dart';
-import 'package:design_system/typography/typography.dart';
-import 'package:design_system/utils/consts.dart';
+import 'package:design_system/src/colors/colors.convinience.dart';
+import 'package:design_system/src/tags/tag_enums.dart';
+import 'package:design_system/src/typography/typography.dart';
+import 'package:design_system/src/utils/consts.dart';
 import 'package:flutter/material.dart';
 
 //TODO: Activate the selected and unselected tag
@@ -14,27 +14,29 @@ import 'package:flutter/material.dart';
 /// [dismissable] default is false. Defines whether the tag is a dissmissable type.
 /// [onCancel] fires when the tag is dissmied.
 /// [type] default is outline. Defines whether the tag is an outline or a fill.
-class TagSmall extends StatefulWidget {
+class TagsMedium extends StatefulWidget {
   final Color? color;
   final bool? dismissable;
+  final String? child;
   // final bool? isSelected;
   final void Function()? onCancel;
   final TagTypes? type;
   // ignore: sort_constructors_first
-  const TagSmall({
+  const TagsMedium({
     this.color,
     this.dismissable,
     // this.isSelected,
     this.onCancel,
     this.type,
+    required this.child,
     Key? key,
   }) : super(key: key);
 
   @override
-  _TagSmallState createState() => _TagSmallState();
+  _TagsMediumState createState() => _TagsMediumState();
 }
 
-class _TagSmallState extends State<TagSmall> {
+class _TagsMediumState extends State<TagsMedium> {
   bool isDismissed = false;
 
   Color backgroundColor({Color? color, TagTypes? type}) {
@@ -70,7 +72,8 @@ class _TagSmallState extends State<TagSmall> {
     if (!isDismissed) {
       return Align(
         child: Container(
-          padding: const EdgeInsets.all(10),
+          height: 40,
+          padding: const EdgeInsets.all(5),
           decoration: BoxDecoration(
               color: backgroundColor(color: widget.color, type: widget.type),
               borderRadius: BorderRadius.circular(100),
@@ -87,7 +90,7 @@ class _TagSmallState extends State<TagSmall> {
                 size: 20,
               ),
               SpaceConsts.horizontalOne,
-              Text('Label',
+              Text(widget.child!,
                   style: MayJuunType.label3().copyWith(
                     color: widget.color ?? LightThemeColors.backgroundPositive,
                   )),
