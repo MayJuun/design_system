@@ -174,7 +174,23 @@ class _MyHomePageState extends State<MyHomePage> {
             const SizedBox(
               height: 30,
             ),
-            TagSmall.tagOutline(),
+            TagSmall(
+              color: Colors.orange,
+              dismissable: true,
+              onCancel: () {
+                debugPrint('cancelled');
+              },
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            ButtonSmall.roundButton(
+              child: Text(
+                '01',
+                style: MayJuunType.label3(),
+              ),
+              onPressed: () {},
+            ),
           ],
         ),
       ),
