@@ -1,13 +1,8 @@
-
-import 'package:mayjuun_design_system/lib/avatars/large/large_avatar.dart';
-import 'package:mayjuun_design_system/lib/avatars/medium/medium_avatar.dart';
-import 'package:mayjuun_design_system/lib/avatars/small/small_avatar.dart';
-
+import 'package:flutter/material.dart';
 import 'package:mayjuun_design_system/src/buttons/buttons.convinience.dart';
 import 'package:mayjuun_design_system/src/tags/tags.convinience.dart';
 import 'package:mayjuun_design_system/src/typography/typography.dart';
 
-import 'package:flutter/material.dart';
 import 'src/colors/colors.convinience.dart';
 
 void main() {
