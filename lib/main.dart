@@ -1,6 +1,6 @@
-import 'package:design_system/src/buttons/buttons.convinience.dart';
-import 'package:design_system/src/tags/tags.convinience.dart';
-import 'package:design_system/src/typography/typography.dart';
+import 'package:mayjuun_design_system/src/buttons/buttons.convinience.dart';
+import 'package:mayjuun_design_system/src/tags/tags.convinience.dart';
+import 'package:mayjuun_design_system/src/typography/typography.dart';
 import 'package:flutter/material.dart';
 import 'src/colors/colors.convinience.dart';
 
