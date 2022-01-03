@@ -1,6 +1,12 @@
+
+import 'package:mayjuun_design_system/lib/avatars/large/large_avatar.dart';
+import 'package:mayjuun_design_system/lib/avatars/medium/medium_avatar.dart';
+import 'package:mayjuun_design_system/lib/avatars/small/small_avatar.dart';
+
 import 'package:mayjuun_design_system/src/buttons/buttons.convinience.dart';
 import 'package:mayjuun_design_system/src/tags/tags.convinience.dart';
 import 'package:mayjuun_design_system/src/typography/typography.dart';
+
 import 'package:flutter/material.dart';
 import 'src/colors/colors.convinience.dart';
 
@@ -60,6 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 30,
             ),
             // ElevatedButton(onPressed: () {}, child: const Text('Press me'))
+
             ButtonSmall.elevatedButtonComponent(
               prefix: Icons.lock,
               suffix: Icons.arrow_downward_outlined,
