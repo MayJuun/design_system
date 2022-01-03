@@ -1,7 +1,7 @@
-import 'package:design_system/src/colors/colors.convinience.dart';
-import 'package:design_system/src/tags/tag_enums.dart';
-import 'package:design_system/src/typography/typography.dart';
-import 'package:design_system/src/utils/consts.dart';
+import 'package:mayjuun_design_system/src/colors/colors.convinience.dart';
+import 'package:mayjuun_design_system/src/tags/tag_enums.dart';
+import 'package:mayjuun_design_system/src/typography/typography.dart';
+import 'package:mayjuun_design_system/src/utils/consts.dart';
 import 'package:flutter/material.dart';
 
 //TODO: Activate the selected and unselected tag
