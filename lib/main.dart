@@ -1,7 +1,8 @@
-import 'package:design_system/src/buttons/buttons.convinience.dart';
-import 'package:design_system/src/tags/tags.convinience.dart';
-import 'package:design_system/src/typography/typography.dart';
 import 'package:flutter/material.dart';
+import 'package:mayjuun_design_system/src/buttons/buttons.convinience.dart';
+import 'package:mayjuun_design_system/src/tags/tags.convinience.dart';
+import 'package:mayjuun_design_system/src/typography/typography.dart';
+
 import 'src/colors/colors.convinience.dart';
 
 void main() {
@@ -60,6 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 30,
             ),
             // ElevatedButton(onPressed: () {}, child: const Text('Press me'))
+
             ButtonSmall.elevatedButtonComponent(
               prefix: Icons.lock,
               suffix: Icons.arrow_downward_outlined,

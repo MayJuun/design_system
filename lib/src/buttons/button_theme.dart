@@ -1,7 +1,7 @@
 // ignore_for_file: avoid_classes_with_only_static_members
 
-import 'package:design_system/src/typography/typography.dart';
-import 'package:design_system/src/colors/color_labels.dart';
+import 'package:mayjuun_design_system/src/typography/typography.dart';
+import 'package:mayjuun_design_system/src/colors/color_labels.dart';
 import 'package:flutter/material.dart';
 
 class MayJuunButtonTheme {
