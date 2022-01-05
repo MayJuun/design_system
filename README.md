@@ -1,16 +1,90 @@
-# design_system
+# MayJuun Design System
 
-A new Flutter project.
+This is a design system that allows you use the [official mayjuun design](<https://www.figma.com/file/yNUOneqHN92b5QkMCnleVb/MayJuun-Design-System-(Copy)>) system in your flutter projects very easily.
 
-## Getting Started
+## Installation
 
-This project is a starting point for a Flutter application.
+Add `mayjuun_design_system` as a dependency in your pubspec.yaml file ([what?](https://flutter.io/using-packages/)).
 
-A few resources to get you started if this is your first Flutter project:
+Import Photo View:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+```dart
+import 'package:mayjuun_design_system/mayjuun_design_system.dart';
+```
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Docs & API
+
+Here is an example calling a small sized button with prefix and suffix Icons and stlying the text with a standard mayjuun typography.
+
+```dart
+@override
+Widget build(BuildContext context) {
+ return ButtonSmall.elevatedButtonComponent(
+    prefix: Icons.lock,
+    suffix: Icons.arrow_downward_outlined,
+    child: Text(
+      'Small',
+      style: MayJuunType.label3(),
+    ),
+    onPressed: () {
+      debugPrint('running');
+    },
+  );
+}
+```
+
+---
+
+## Colors
+
+The design system has a variety of colors that are implemented in two major ways:
+
+- #### Color Codes
+
+  This gives a list of all the colors that are defined in the [official mayjuun design](<https://www.figma.com/file/yNUOneqHN92b5QkMCnleVb/MayJuun-Design-System-(Copy)?node-id=2%3A2>). You can invoke a color code like so:
+
+  >
+
+  ```dart
+  @override
+  Widget build(BuildContext context) {
+  return Container(
+  height: 200, width: 100, color: ColorCodes.RED500;
+  }
+  ```
+
+  > Avoid using color codes directly in your projects. Instead use **Color Labels** as discussed below
+
+- #### Color Labels
+
+  Color Labels are predefined color names that the design system uses. Under the hood, color labels are _Color Codes with a Labels._ It is done that way to improve UX. Color labels consistes of two classes which can be invoked like so.
+
+  >
+
+  - Light Theme Color Labels
+
+    >
+
+    ```dart
+    @override
+    Widget build(BuildContext context) {
+      return Container(
+      height: 200, width: 100, color: LightThemeColors.negative);
+    }
+    ```
+
+  - Dark Theme Color Labels
+
+    >
+
+    ```dart
+      @override
+      Widget build(BuildContext context) {
+        return Container(
+        height: 200, width: 100, color: LightThemeColors.positive);
+      }
+
+    ```
+
+    **Note :**
+    You should always use the appropiate color labels for the light and dark theme of your app as the colors vary between both color classes.
