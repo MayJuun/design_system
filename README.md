@@ -1,10 +1,10 @@
-# MayJuun Design System
+# MayJuun Design System (MDS)
 
 This is a design system that allows you use the [official mayjuun design](<https://www.figma.com/file/yNUOneqHN92b5QkMCnleVb/MayJuun-Design-System-(Copy)>) system in your flutter projects very easily.
 
 ## Installation
 
-Add `mayjuun_design_system` as a dependency in your pubspec.yaml file ([what?](https://flutter.io/using-packages/)).
+Add `mayjuun_design_system (MDS)` as a dependency in your pubspec.yaml file ([what?](https://flutter.io/using-packages/)).
 
 Import Photo View:
 
@@ -81,10 +81,75 @@ The design system has a variety of colors that are implemented in two major ways
       @override
       Widget build(BuildContext context) {
         return Container(
-        height: 200, width: 100, color: LightThemeColors.positive);
+        height: 200, width: 100, color: DarkThemeColors.positive);
       }
 
     ```
 
     **Note :**
     You should always use the appropiate color labels for the light and dark theme of your app as the colors vary between both color classes.
+
+>
+
+## Buttons
+
+The buttons used in the Mayjuun Design System (MDS) speed up development by allowing you to pass multiple parameters. Just like the Colors, the MayJuun Buttons can be called as so:
+
+>
+
+```dart
+  @override
+  Widget build(BuildContext context) {
+    return ButtonMedium.elevatedButtonComponent(
+      prefix: Icons.lock,
+      suffix: Icons.arrow_downward_outlined,
+      child: Text(
+        'Medium',
+        style: MayJuunType.label3(),
+      ),
+      onPressed: () {
+        debugPrint('anonymous function called');
+      },
+    );
+  }
+
+```
+
+- #### Button Types
+
+  - ###### Large Buttons
+    To invoke large buttons, simply call this method
+    >
+    ```dart
+    ButtonLarge.elevatedButtonComponent();
+    ```
+    ```dart
+    ButtonLarge.squareButton();
+    ```
+    ```dart
+    ButtonLarge.roundButton();
+    ```
+  - ###### Medium Buttons
+    To invoke large buttons, simply call this method
+    >
+    ```dart
+    ButtonMedium.elevatedButtonComponent();
+    ```
+  - ###### Small Buttons
+    To invoke large buttons, simply call this method
+    >
+    ```dart
+    ButtonSmall.elevatedButtonComponent();
+    ```
+  - ###### Large Buttons
+    To invoke large buttons, simply call this method
+    >
+    ```dart
+    ButtonLarge.elevatedButtonComponent();
+    ```
+  - ###### Large Buttons
+    To invoke large buttons, simply call this method
+    >
+    ```dart
+    ButtonLarge.elevatedButtonComponent();
+    ```
