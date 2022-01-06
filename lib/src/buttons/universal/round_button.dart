@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 ///
 Row roundButtonComponent({
   required Widget child,
-  IconData? icon,
+  // IconData? icon,
   required void Function() onPressed,
 }) {
   return Row(

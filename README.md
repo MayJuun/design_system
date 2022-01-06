@@ -6,7 +6,7 @@ This is a design system that allows you use the [official mayjuun design](<https
 
 Add `mayjuun_design_system (MDS)` as a dependency in your pubspec.yaml file ([what?](https://flutter.io/using-packages/)).
 
-Import Photo View:
+Import Mayjuun Design System:
 
 ```dart
 import 'package:mayjuun_design_system/mayjuun_design_system.dart';
@@ -115,41 +115,80 @@ The buttons used in the Mayjuun Design System (MDS) speed up development by allo
 
 ```
 
+- #### Button Sizes
+
+  There are generally 3 sizes of buttons in the MDS which are namely:
+
+  - Large buttons
+
+  ```dart
+  ButtonLarge;
+  ```
+
+  - Medium Buttons
+
+  ```dart
+  ButtonMedium;
+  ```
+
+  - Small buttons
+
+  ```dart
+  ButtonSmall;
+  ```
+
+  These are static button classes, so you do not need to instantiate them.
+  The differnce in these are simply **varying button heights**, the widths are of adaptable pixels as your design defines.
+
+  >
+
 - #### Button Types
 
-  - ###### Large Buttons
-    To invoke large buttons, simply call this method
+  There are generally 4 button types that exists for all button sizes, which are namely:
+
+  - Elevated Buttons
+  - Square Buttons
+  - Round Buttons
+  - Pill Buttons
+
+  - ###### Example Code
+
+    Say we want to call each of the button types on the Large button size, we will go around it like so:
+
     >
+
     ```dart
     ButtonLarge.elevatedButtonComponent();
-    ```
-    ```dart
+
     ButtonLarge.squareButton();
-    ```
-    ```dart
+
     ButtonLarge.roundButton();
+
+    ButtonLarge.pillButton();
     ```
-  - ###### Medium Buttons
-    To invoke large buttons, simply call this method
+
     >
-    ```dart
-    ButtonMedium.elevatedButtonComponent();
-    ```
-  - ###### Small Buttons
-    To invoke large buttons, simply call this method
-    >
-    ```dart
-    ButtonSmall.elevatedButtonComponent();
-    ```
-  - ###### Large Buttons
-    To invoke large buttons, simply call this method
-    >
-    ```dart
-    ButtonLarge.elevatedButtonComponent();
-    ```
-  - ###### Large Buttons
-    To invoke large buttons, simply call this method
-    >
-    ```dart
-    ButtonLarge.elevatedButtonComponent();
-    ```
+
+## Typograpghy
+
+The MDS offers you typography strictly in terms of **components**.
+
+###### What does this mean ?
+
+This means that you have the flexibility to customize your internal app theme typography via the `TextTheme`, and only use the MDS typography as a component where needed.
+There are 4 major categories of typographys which are:
+
+- Display
+- Heading
+- Label
+- Paragraph
+
+  > Mostly, these categories vary in `font-weight`, `font-size` and `line-height`. You can call the typography class as so:
+
+  >
+
+  ```dart
+
+  ```
+
+  >
