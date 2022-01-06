@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 ///
 Row squareButtonComponent({
   required Widget child,
-  IconData? icon,
+  // IconData? icon,
   required void Function() onPressed,
 }) {
   return Row(
