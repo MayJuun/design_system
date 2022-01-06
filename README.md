@@ -229,3 +229,142 @@ You can further enhance your typography styling by using either of these three a
   An inbuit flutter method used on the type to be styled. [Read More](https://api.flutter.dev/flutter/painting/TextStyle/apply.html)
 
 >
+
+## Tags
+
+MDS tags allow you a lot flexibilities when using tags.
+
+>
+
+```dart
+
+@override
+Widget build(BuildContext context) {
+  return  TagsSmall(
+    child: 'Small',
+    color: Colors.purple,
+    dismissable: true,
+    type: TagTypes.outline,
+    onCancel: () {
+      debugPrint('cancelled');
+    },
+     );
+}
+```
+
+- #### Tag Sizes
+
+  There are generally 3 sizes of tags in the MDS which are namely:
+
+  - Large Tags
+    >
+
+  ```dart
+  TagsLarge(child: 'Tag Title');
+  ```
+
+  - Medium Tags
+    >
+
+  ```dart
+  TagsMedium(child: 'Tag Title');
+  ```
+
+  - Small Tags
+    >
+
+  ```dart
+  TagsSmall(child: 'Tag Title');
+  ```
+
+  >
+
+- #### Tag Types
+
+  There are generally 3 sizes of tags in the MDS which are namely:
+
+  >
+
+  - **Outline Tag**
+    To make a tag an outline tag, simply pass the `TagType.outline` enum as a parameter to the Tags widget that is being called.
+    >
+
+  ```dart
+  TagsLarge(child: 'Tag Title', type: TagTypes.outline);
+  ```
+
+  >
+
+  - **Fill Tag**
+    To make a tag a fill tag, simply pass the `TagType.fill` enum as a parameter to the Tags widget that is being called.
+    >
+
+  ```dart
+  TagsLarge(child: 'Tag Title', type: TagTypes.fill);
+  ```
+
+  #### Tag parameters
+
+  ```dart
+  Color? color
+  ```
+
+  ```dart
+  bool? dismissable
+  ```
+
+  ```dart
+  String child //required
+  ```
+
+  ```dart
+  void Function? onCancel;
+  ```
+
+  ```dart
+  TagTypes type;
+  ```
+
+## Theming
+
+The MDS themes is surprisingly very minimal, and the reason for that is to ensure that users are able to be very flexbile with their own themes and design their apps to their specific taste while leveraging the widget/component based design system. On top of that, the MDS offers you a component based theming capabilities such that, you can pass the available theme components as parameters into your `ThemeData()` . It is also interesting to note that while you're configuring the internal theme of your app, the MDS already offers componenets such as color codes, Color labels and typography, which makes it easier and less repetitive for you. This is the main reason while the MDS was designed to have a relatively small and only important theming components.
+
+Below are some themeing components that can used in your `ThemeData()` parameters / decedants parameters.
+
+>
+
+- ##### Elevated Button Theme
+
+  You can pass the MDS button theme class as a parameter to the `elevatedButtonTheme` constructor:
+
+  >
+
+  ```dart
+    @override
+    Widget build(BuildContext context) {
+      return MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: LightThemeColors.GRN400,
+          elevatedButtonTheme: MayJuunButtonTheme.elevatedButtonTheme()
+        ),
+        home: const MyHomePage(title: 'Design System Demo'),
+      );
+    }
+  ```
+
+  > For theming, no parameters are required, because it is a more strict way of following the design system pixel for pixel.
+
+  ***
+
+## Design System
+
+The [official mayjuun design](<https://www.figma.com/file/yNUOneqHN92b5QkMCnleVb/MayJuun-Design-System-(Copy)>) system.
+
+## Contribution
+
+Any complaints, reviews or suggestions can be done by making a PR [(what's that ?)](https://opensource.com/article/19/7/create-pull-request-github) to this [repo](https://github.com/MayJuun/design_system)
+
+## Support us
+
+You reach to us at : info@mayjuun.com
