@@ -171,7 +171,7 @@ The buttons used in the Mayjuun Design System (MDS) speed up development by allo
 
 ## Typograpghy
 
-The MDS offers you typography strictly in terms of **components**.
+The MDS offers you typography strictly in terms of **components**. _[See more here](<https://www.figma.com/file/yNUOneqHN92b5QkMCnleVb/MayJuun-Design-System-(Copy)?node-id=253%3A947>)_
 
 ###### What does this mean ?
 
@@ -183,12 +183,49 @@ There are 4 major categories of typographys which are:
 - Label
 - Paragraph
 
-  > Mostly, these categories vary in `font-weight`, `font-size` and `line-height`. You can call the typography class as so:
+  >
+
+  Mostly, these categories vary in `font-weight`, `font-size` and `line-height`. You can call the typography class as so:
 
   >
 
   ```dart
 
+  @override
+  Widget build(BuildContext context) {
+    return  Text(
+      'This is the widget displaying now',
+      style: MayJuunType.heading1(),
+      );
+  }
   ```
 
+###### Additional Styling
+
+You can further enhance your typography styling by using either of these three approaches
+
+- **Using the Type class methods parameters:**
+  These allows you to change only the `color` and `font-weight` of the type
+
   >
+
+  ```dart
+
+  @override
+  Widget build(BuildContext context) {
+    return  Text(
+      'This is the widget displaying now',
+      style: MayJuunType.heading1(color: Colors.red, font-weight: FontWeight.w200),
+      );
+  }
+  ```
+
+- **`copywith()` Method**:
+  An inbuit flutter method used on the type to be styled. [Read More](https://api.flutter.dev/flutter/material/TextTheme/copyWith.html)
+
+  >
+
+- **`apply()` Method**:
+  An inbuit flutter method used on the type to be styled. [Read More](https://api.flutter.dev/flutter/painting/TextStyle/apply.html)
+
+>
