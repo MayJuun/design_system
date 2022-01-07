@@ -41,7 +41,7 @@ class _TagsLargeState extends State<TagsLarge> {
 
   Color backgroundColor({Color? color, TagTypes? type}) {
     if (color == null) {
-      if (type == TagTypes.filled) {
+      if (type == TagTypes.fill) {
         return LightThemeColors.backgroundPositive.withOpacity(.2);
       } else {
         return Colors.transparent;
@@ -55,7 +55,7 @@ class _TagsLargeState extends State<TagsLarge> {
 
   Color borderColor({Color? color, TagTypes? type}) {
     if (color == null) {
-      if (type == TagTypes.filled) {
+      if (type == TagTypes.fill) {
         return Colors.transparent;
       } else {
         return LightThemeColors.backgroundPositive.withOpacity(.2);

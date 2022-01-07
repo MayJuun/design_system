@@ -65,6 +65,7 @@ class ColorCodes {
   static Color BLU12K = const Color(0XFFEDF1FC);
 
 //COLOR Grey//
+  static Color GRY300 = const Color(0XFF4A4A4A);
   static Color GRY400 = const Color(0XFF5E5E5E);
   static Color GRY500 = const Color(0XFF757575);
   static Color GRY600 = const Color(0XFF919191);
