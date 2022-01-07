@@ -2,12 +2,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:mayjuun_design_system/mayjuun_design_system.dart';
+import 'package:mayjuun_design_system/src/enums/form_input_type.dart';
 
 class FormInputTheme {
   //params enabled color, focused Color, form themeMode,
   static InputDecorationTheme outlineFormTheme(
       {required Color enabledColor,
       required Color focusedColor,
+      required FormInputType formType,
       required ThemeModeType themeMode}) {
     return InputDecorationTheme(
         //General Border Color
@@ -15,14 +17,17 @@ class FormInputTheme {
           borderSide: BorderSide(
               color: themeMode == ThemeModeType.lightTheme
                   ? LightThemeColors.enabledBorder
-                  : DarkThemeColors.enabledBorder),
+                  : DarkThemeColors.enabledBorder,
+              width: formType == FormInputType.outline ? 1 : 0),
         ),
 
         //Enabled Border Color
         enabledBorder: OutlineInputBorder(
           borderSide: BorderSide(
-            color: enabledColor,
-          ),
+              color: formType == FormInputType.outline
+                  ? enabledColor
+                  : Colors.transparent,
+              width: formType == FormInputType.outline ? 1 : 0),
         ),
 
         //Focused Border Color
@@ -45,7 +50,6 @@ class FormInputTheme {
             color: Colors.red,
           ),
         ),
-
         //Disabled Border
         disabledBorder: OutlineInputBorder(
           borderSide: BorderSide(
@@ -56,14 +60,11 @@ class FormInputTheme {
         errorStyle: TextStyle(
           color: LightThemeColors.negative,
         ),
+        fillColor: formType == FormInputType.fill
+            ? focusedColor.withOpacity(.15)
+            : Colors.transparent,
+        filled: formType == FormInputType.outline ? false : true,
         alignLabelWithHint: true,
         contentPadding: EdgeInsets.symmetric(vertical: 5, horizontal: 20));
   }
 }
-
-// focusedBorder: UnderlineInputBorder(
-//   // borderRadius: BorderRadius.circular(25.0),
-//   borderSide: BorderSide(
-//     color: Colors.grey.shade700,
-//   ),
-// ),

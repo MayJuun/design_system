@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mayjuun_design_system/mayjuun_design_system.dart';
+import 'package:mayjuun_design_system/src/enums/form_input_type.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
           inputDecorationTheme: FormInputTheme.outlineFormTheme(
               enabledColor: LightThemeColors.enabledBorder,
               focusedColor: LightThemeColors.backgroundAccent,
-              themeMode: ThemeModeType.lightTheme)),
+              themeMode: ThemeModeType.lightTheme,
+              formType: FormInputType.fill)),
       home: const MyHomePage(title: 'Design System Demo'),
     );
   }
