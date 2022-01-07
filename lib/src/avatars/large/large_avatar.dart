@@ -6,8 +6,10 @@ class large extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Image.asset('assests/avatars/Female_large_1.png'),
+      body: Container(
+        height: 200,
+        width: 200,
+        child: Image.asset('assets/avatars/Female_large_1.png'),
       ),
     );
   }
