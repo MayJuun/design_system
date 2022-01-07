@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mayjuun_design_system/src/buttons/buttons.convinience.dart';
+import 'package:mayjuun_design_system/src/forms/outline/form_outline_theme.dart';
 import 'package:mayjuun_design_system/src/tags/tags.convinience.dart';
 import 'package:mayjuun_design_system/src/typography/typography.dart';
 
@@ -18,9 +19,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.green,
-        // elevatedButtonTheme: MayJuunButtonTheme.elevatedButtonTheme()
-      ),
+          primarySwatch: Colors.green,
+          elevatedButtonTheme: MayJuunButtonTheme.elevatedButtonTheme(),
+          inputDecorationTheme: FormInputTheme.outlineFormTheme()),
       home: const MyHomePage(title: 'Design System Demo'),
     );
   }
@@ -209,6 +210,24 @@ class _MyHomePageState extends State<MyHomePage> {
               type: TagTypes.outline,
               onCancel: () {
                 debugPrint('cancelled');
+              },
+            ),
+
+            const SizedBox(
+              height: 30,
+            ),
+            TextFormField(
+              // controller: _formFieldControllers.firstNameController,
+              decoration: const InputDecoration(
+                labelText: 'First Name',
+                hintText: 'John',
+              ),
+              validator: (value) {
+                if (value!.isEmpty) {
+                  return 'Please enter a First name';
+                } else {
+                  return null;
+                }
               },
             ),
           ],

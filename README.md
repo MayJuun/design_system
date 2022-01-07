@@ -355,7 +355,7 @@ Below are some themeing components that can used in your `ThemeData()` parameter
 
   > For theming, no parameters are required, because it is a more strict way of following the design system pixel for pixel.
 
-  ***
+---
 
 ## Design System
 
