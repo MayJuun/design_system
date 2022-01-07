@@ -1,0 +1,1 @@
+enum ThemeModeType { lightTheme, darkTheme }

@@ -36,6 +36,10 @@ class LightThemeColors {
   static Color contentNegative = ColorCodes.RED400;
   static Color contentPositive = ColorCodes.GRN400;
   static Color contentWarning = ColorCodes.ORN300;
+
+  //Core: border
+  static Color enabledBorder = ColorCodes.GRY500;
+  static Color disabledBorder = ColorCodes.GRY800;
 }
 
 ///This class contains all labeled dark theme colors.
@@ -72,4 +76,8 @@ class DarkThemeColors {
   static Color contentNegative = ColorCodes.RED300;
   static Color contentPositive = ColorCodes.GRN400;
   static Color contentWarning = ColorCodes.ORN300;
+
+  //Core: border
+  static Color enabledBorder = ColorCodes.GRY500;
+  static Color disabledBorder = ColorCodes.GRY300;
 }
