@@ -17,11 +17,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           primarySwatch: Colors.green,
           elevatedButtonTheme: MayJuunButtonTheme.elevatedButtonTheme(),
-          inputDecorationTheme: FormInputTheme.outlineFormTheme(
+          inputDecorationTheme: FormInputTheme.formTheme(
               enabledColor: LightThemeColors.enabledBorder,
               focusedColor: LightThemeColors.backgroundAccent,
               themeMode: ThemeModeType.lightTheme,
-              formType: FormInputType.fill)),
+              formType: FormInputType.outline)),
       home: const MyHomePage(title: 'Design System Demo'),
     );
   }

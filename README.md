@@ -333,7 +333,7 @@ Below are some themeing components that can used in your `ThemeData()` parameter
 
 >
 
-- ##### Elevated Button Theme
+- ### Elevated Button Theme
 
   You can pass the MDS button theme class as a parameter to the `elevatedButtonTheme` constructor:
 
@@ -354,6 +354,44 @@ Below are some themeing components that can used in your `ThemeData()` parameter
   ```
 
   > For theming, no parameters are required, because it is a more strict way of following the design system pixel for pixel.
+
+- ### Form Theme (InputDecorationTheme)
+
+  You can apply a general form theme to your flutter app simply calling the `FormInputTheme` class and applying its methods.
+
+  ```dart
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: LightThemeColors.GRN400,
+        elevatedButtonTheme: MayJuunButtonTheme.elevatedButtonTheme(),
+        inputDecorationTheme: FormInputTheme.formTheme(formType: FormInputType.outline)
+      ),
+    );
+  }
+  ```
+
+  #### `FormInputTheme.formTheme()` parameters
+
+  ```dart
+  Color enabledColor // required : border color of an enabled form
+  ```
+
+  ```dart
+  Color focusedColor // required : border color of a focused form
+  ```
+
+  ```dart
+  FormInputType formType //required: an enuming for selecting the form style
+  ```
+
+  ```dart
+  ThemeModeType themeMode //required: for intelligently matching dark and light mode colors
+  ```
+
+  > You are adviced to maintain a single form style for your entire app except where it isn't exceedingly neccessary to do otherwise.
 
 ---
 
