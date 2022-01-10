@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mayjuun_design_system/mayjuun_design_system.dart';
+import 'package:mayjuun_design_system/src/avatars/large/large_avatar.dart';
+import 'package:mayjuun_design_system/src/avatars/medium/medium_avatar.dart';
+import 'package:mayjuun_design_system/src/avatars/small/small_avatar.dart';
 import 'package:mayjuun_design_system/src/enums/form_input_type.dart';
 
 void main() {
@@ -17,11 +20,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           primarySwatch: Colors.green,
           elevatedButtonTheme: MayJuunButtonTheme.elevatedButtonTheme(),
-          inputDecorationTheme: FormInputTheme.outlineFormTheme(
+          inputDecorationTheme: FormInputTheme.formTheme(
               enabledColor: LightThemeColors.enabledBorder,
               focusedColor: LightThemeColors.backgroundAccent,
               themeMode: ThemeModeType.lightTheme,
-              formType: FormInputType.fill)),
+              formType: FormInputType.outline)),
       home: const MyHomePage(title: 'Design System Demo'),
     );
   }
@@ -37,6 +40,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  bool isVisible = true;
+  bool isVisible2 = true;
+  bool isVisible3 = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,6 +62,42 @@ class _MyHomePageState extends State<MyHomePage> {
             const SizedBox(
               height: 30,
             ),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                    onPressed: () {
+                      setState(() {
+                        isVisible = !isVisible;
+                      });
+                    },
+                    child: const Text('large')),
+                Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: ElevatedButton(
+                      onPressed: () {
+                        setState(() {
+                          isVisible2 = !isVisible2;
+                        });
+                      },
+                      child: const Text('Medium')),
+                ),
+                //MediaQuery.of(context).size.height * factor
+
+                ElevatedButton(
+                    onPressed: () {
+                      setState(() {
+                        isVisible3 = !isVisible3;
+                      });
+                    },
+                    child: const Text('small')),
+              ],
+            ),
+            Visibility(visible: isVisible, child: const Large()),
+            // Visibility(visible: isVisible2, child: medium()),
+            // Visibility(visible: isVisible3, child: small()),
+
             //This is where we display any widget that we are working on.
             Container(
                 height: 200, width: 100, color: LightThemeColors.negative),
@@ -86,7 +128,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 'Medium',
                 style: MayJuunType.label3(),
               ),
-              onPressed: () {},
+              onPressed: () => const medium(),
             ),
             const SizedBox(
               height: 30,

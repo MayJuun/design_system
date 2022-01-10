@@ -6,7 +6,7 @@ import 'package:mayjuun_design_system/src/enums/form_input_type.dart';
 
 class FormInputTheme {
   //params enabled color, focused Color, form themeMode,
-  static InputDecorationTheme outlineFormTheme(
+  static InputDecorationTheme formTheme(
       {required Color enabledColor,
       required Color focusedColor,
       required FormInputType formType,
