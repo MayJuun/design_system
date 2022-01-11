@@ -216,7 +216,7 @@ ElevatedButton(
       ],
   ),
   ```
- Say we want to the small avatar size, we will call the function small.
+ Say we want the small avatar size, then we will call the function small.
  Visibility(visible: isVisible3, child: const Small()),
 
 note : Here we have been using the visibility widget
