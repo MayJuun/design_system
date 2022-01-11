@@ -205,8 +205,6 @@ Mayjuun design System (MDS) provides the option for selecting your own Avatars.
 ###### What does this mean ?
 They are basically a visual form to represent a user or a component through which the user will be able identify themselves.
 
-MDS gives an option to select the type ( Male, female or nuetral) and size (large, medium or small)  with a lot of flexibility. 
-
   ```dart
   bool isVisible3 = true;
   @override
@@ -242,6 +240,7 @@ note : Here we have been using the visibility widget
   ```dart
   child: Image.asset('assets/avatars/Female_small_1.png'),
   ```
+Note : MDS gives an option to select the type ( Male, female or nuetral) and size (large, medium or small)  with a lot of flexibility. 
 
 ###### Additional Styling
 
