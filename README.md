@@ -200,7 +200,11 @@ There are 4 major categories of typographys which are:
   }
   ```
 ## Avatars
-Mayjuun design System (MDS) provides the option for selecting your own Avatars. They are basically a visual form to represent a user or a component through which the user will be able identify themselves.
+Mayjuun design System (MDS) provides the option for selecting your own Avatars.
+
+###### What does this mean ?
+They are basically a visual form to represent a user or a component through which the user will be able identify themselves.
+
 MDS gives an option to select the type ( Male, female or nuetral) and size (large, medium or small)  with a lot of flexibility. 
 
   ```dart
