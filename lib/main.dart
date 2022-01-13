@@ -19,6 +19,8 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
           primarySwatch: Colors.green,
+
+          //TODO: add in the documentation
           elevatedButtonTheme: MayJuunButtonTheme.elevatedButtonTheme(),
           inputDecorationTheme: FormInputTheme.formTheme(
               enabledColor: LightThemeColors.enabledBorder,

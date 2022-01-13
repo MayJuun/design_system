@@ -9,7 +9,7 @@ class MayJuunButtonTheme {
   ///have more flexiblity over your elevated button.
   ///Subsequently, you can call ```ButtonSmall.elevatedButtonComponent()```, ```ButtonMedium.elevatedButtonComponent()```,
   /// or ```ButtonLarge.elevatedButtonComponent()``` to have the desired and pre-fedefined button size
-  static ElevatedButtonThemeData elevatedButtonTheme() {
+  static ElevatedButtonThemeData elevatedButtonTheme({Color? buttonColor}) {
     return ElevatedButtonThemeData(
       style: ButtonStyle(
         mouseCursor:
@@ -20,7 +20,7 @@ class MayJuunButtonTheme {
         foregroundColor:
             MaterialStateProperty.all<Color>(LightThemeColors.contentPrimary),
         backgroundColor: MaterialStateProperty.all<Color>(
-            LightThemeColors.backgroundPositive),
+            buttonColor ?? LightThemeColors.backgroundPositive),
         overlayColor: MaterialStateProperty.resolveWith<Color?>(
           (Set<MaterialState> states) {
             if (states.contains(MaterialState.hovered)) {
@@ -28,7 +28,7 @@ class MayJuunButtonTheme {
             }
             if (states.contains(MaterialState.focused) ||
                 states.contains(MaterialState.pressed)) {
-              return Colors.white.withOpacity(0.12);
+              return Colors.purple.withOpacity(0.12);
             } else {
               return null;
             } // Defer to the widget's default.
