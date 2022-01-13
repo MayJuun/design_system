@@ -199,6 +199,48 @@ There are 4 major categories of typographys which are:
       );
   }
   ```
+## Avatars
+Mayjuun design System (MDS) provides the option for selecting your own Avatars.
+
+###### What does this mean ?
+They are basically a visual form to represent a user or a component through which the user will be able identify themselves.
+
+  ```dart
+  bool isVisible3 = true;
+  @override
+ElevatedButton(
+                    onPressed: () {
+                      setState(() {
+                        isVisible3 = !isVisible3;
+                      });
+                    },
+                    child: const Text('small')),
+      ],
+  ),
+  ```
+ Say we want the small avatar size, then we will call the function small.
+ Visibility(visible: isVisible3, child: const Small()),
+
+note : Here we have been using the visibility widget
+
+#### Avatar Sizes
+  There are generally 3 sizes of avatars in the MDS which are namely:
+  
+  - Large avatars 
+  ```dart
+  child: Image.asset('assets/avatars/Female_large_1.png'),
+  ```
+
+  - Medium avatars
+  ```dart
+   child: Image.asset('assets/avatars/Female_medium_1.png'),
+  ```
+
+  - Small avatars
+  ```dart
+  child: Image.asset('assets/avatars/Female_small_1.png'),
+  ```
+Note : MDS gives an option to select the type ( Male, female or nuetral) and size (large, medium or small)  with a lot of flexibility. 
 
 ###### Additional Styling
 
@@ -281,7 +323,7 @@ Widget build(BuildContext context) {
 
 - #### Tag Types
 
-  There are generally 3 sizes of tags in the MDS which are namely:
+  There are generally 3 types of tags in the MDS which are namely:
 
   >
 
