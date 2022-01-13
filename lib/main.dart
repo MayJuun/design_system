@@ -19,6 +19,8 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
           primarySwatch: Colors.green,
+
+          //TODO: add in the documentation
           elevatedButtonTheme: MayJuunButtonTheme.elevatedButtonTheme(),
           inputDecorationTheme: FormInputTheme.formTheme(
               enabledColor: LightThemeColors.enabledBorder,
@@ -95,8 +97,8 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
             Visibility(visible: isVisible, child: const Large()),
-            // Visibility(visible: isVisible2, child: medium()),
-            // Visibility(visible: isVisible3, child: small()),
+            Visibility(visible: isVisible2, child: const Medium()),
+            // Visibility(visible: isVisible3, child: const Small()),
 
             //This is where we display any widget that we are working on.
             Container(
@@ -128,7 +130,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 'Medium',
                 style: MayJuunType.label3(),
               ),
-              onPressed: () => const medium(),
+              onPressed: () => const Medium(),
             ),
             const SizedBox(
               height: 30,

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class medium extends StatelessWidget {
-  const medium({Key? key}) : super(key: key);
+class Medium extends StatelessWidget {
+  const Medium({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Image.asset('assets/avatars/Female_medium_1.png'),
-      ),
+    return Container(
+      height: 200,
+      width: 200,
+      child: Image.asset('assets/avatars/Female_medium_1.png'),
     );
   }
 }
