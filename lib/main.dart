@@ -19,6 +19,8 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
           primarySwatch: Colors.green,
+
+          //TODO: add in the documentation
           elevatedButtonTheme: MayJuunButtonTheme.elevatedButtonTheme(),
           inputDecorationTheme: FormInputTheme.formTheme(
               enabledColor: LightThemeColors.enabledBorder,
@@ -96,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Visibility(visible: isVisible, child: const Large()),
             Visibility(visible: isVisible2, child: const Medium()),
-            Visibility(visible: isVisible3, child: const Small()),
+            // Visibility(visible: isVisible3, child: const Small()),
 
             //This is where we display any widget that we are working on.
             Container(
