@@ -191,58 +191,8 @@ There are 4 major categories of typographys which are:
 
   ```dart
 
-  @override
-  Widget build(BuildContext context) {
-    return  Text(
-      'This is the widget displaying now',
-      style: MayJuunType.heading1(),
-      );
-  }
+  ###### Additional Styling
   ```
-## Avatars
-Mayjuun design System (MDS) provides the option for selecting your own Avatars.
-
-###### What does this mean ?
-They are basically a visual form to represent a user or a component through which the user will be able identify themselves.
-
-  ```dart
-  bool isVisible3 = true;
-  @override
-ElevatedButton(
-                    onPressed: () {
-                      setState(() {
-                        isVisible3 = !isVisible3;
-                      });
-                    },
-                    child: const Text('small')),
-      ],
-  ),
-  ```
- Say we want the small avatar size, then we will call the function small.
- Visibility(visible: isVisible3, child: const Small()),
-
-note : Here we have been using the visibility widget
-
-#### Avatar Sizes
-  There are generally 3 sizes of avatars in the MDS which are namely:
-  
-  - Large avatars 
-  ```dart
-  child: Image.asset('assets/avatars/Female_large_1.png'),
-  ```
-
-  - Medium avatars
-  ```dart
-   child: Image.asset('assets/avatars/Female_medium_1.png'),
-  ```
-
-  - Small avatars
-  ```dart
-  child: Image.asset('assets/avatars/Female_small_1.png'),
-  ```
-Note : MDS gives an option to select the type ( Male, female or nuetral) and size (large, medium or small)  with a lot of flexibility. 
-
-###### Additional Styling
 
 You can further enhance your typography styling by using either of these three approaches
 
@@ -269,6 +219,73 @@ You can further enhance your typography styling by using either of these three a
 
 - **`apply()` Method**:
   An inbuit flutter method used on the type to be styled. [Read More](https://api.flutter.dev/flutter/painting/TextStyle/apply.html)
+
+  >
+
+  ```dart
+  @override
+  Widget build(BuildContext context) {
+    return  Text(
+      'This is the widget displaying now',
+      style: MayJuunType.heading1(),
+      );
+  }
+  ```
+
+## Avatars
+
+Mayjuun design System (MDS) provides the option for selecting your own Avatars.
+
+###### What does this mean ?
+
+They are basically a visual form to represent a user or a component through which the user will be able identify themselves.
+
+```dart
+bool isVisible3 = true;
+@override
+ElevatedButton(
+  onPressed: () {
+    setState(() {
+      isVisible3 = !isVisible3;
+    });
+  },
+  child: const Text('small')),
+    ],
+),
+```
+
+Say we want the small avatar size, then we will call the function small.
+Visibility(visible: isVisible3, child: const Small()),
+
+note : Here we have been using the visibility widget
+
+#### Avatar Sizes
+
+There are generally 3 sizes of avatars in the MDS which are namely:
+
+- Large avatars
+
+```dart
+child: Image.asset('assets/avatars/Female_large_1.png'),
+```
+
+- Medium avatars
+
+```dart
+ child: Image.asset('assets/avatars/Female_medium_1.png'),
+```
+
+- Small avatars
+  To call an avatar with a male gender of black color and teenage maturity, see below
+
+```dart
+AvatarSmall.avatar(
+  gender: AvatarGender.male,
+  skinType: AvatarSkintype.black,
+  maturity: AvatarMaturity.teenager);
+```
+
+Note : MDS gives an option to select the type ( Male, female or nuetral) and size (large, medium or small) with a lot of flexibility.
 
 >
 
