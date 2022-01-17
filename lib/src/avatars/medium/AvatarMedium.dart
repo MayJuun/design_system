@@ -3,7 +3,7 @@ import 'package:mayjuun_design_system/src/enums/avartar.dart';
 
 // ignore: avoid_classes_with_only_static_members
 class AvatarMedium {
-  static SizedBox? avatar(
+  static Widget avatar(
       AvatarGender gender, AvatarMaturity maturity, AvatarSkinType skinType) {
     if (gender == AvatarGender.male) {
       if (maturity == AvatarMaturity.teenager) {
