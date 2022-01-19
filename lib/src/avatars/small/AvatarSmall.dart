@@ -3,8 +3,8 @@ import 'package:mayjuun_design_system/src/enums/avartar.dart';
 
 // ignore: avoid_classes_with_only_static_members
 class AvatarSmall {
-  static SizedBox? avatar(
-      AvatarGender gender, AvatarMaturity maturity, AvatarSkinType skinType) {
+  static Widget avatar(AvatarGender gender, AvatarMaturity maturity,
+      AvatarSkinType skinType, Avatarhaircolor haircolor) {
     if (gender == AvatarGender.male) {
       if (maturity == AvatarMaturity.teenager) {
         if (skinType == AvatarSkinType.black) {
@@ -14,8 +14,19 @@ class AvatarSmall {
           return SizedBox(
               width: 40, child: Image.asset('assets/avatars/Male_small_8.png'));
         } else {
-          return SizedBox(
-              width: 40, child: Image.asset('assets/avatars/Male_small_5.png'));
+          if (haircolor == Avatarhaircolor.black) {
+            return SizedBox(
+                width: 40,
+                child: Image.asset('assets/avatars/Male_small_5.png'));
+          } else if (haircolor == Avatarhaircolor.lightbrown) {
+            return SizedBox(
+                width: 40,
+                child: Image.asset('assets/avatars/Male_small_6.png'));
+          } else {
+            return SizedBox(
+                width: 40,
+                child: Image.asset('assets/avatars/Male_small_7.png'));
+          }
         }
       } else {
         if (skinType == AvatarSkinType.black) {
@@ -25,12 +36,23 @@ class AvatarSmall {
           return SizedBox(
               width: 40, child: Image.asset('assets/avatars/Male_small_3.png'));
         } else {
-          return SizedBox(
-              width: 40, child: Image.asset('assets/avatars/Male_small_1.png'));
+          if (haircolor == Avatarhaircolor.black) {
+            return SizedBox(
+                width: 40,
+                child: Image.asset('assets/avatars/Male_small_1.png'));
+          } else if (haircolor == Avatarhaircolor.lightbrown) {
+            return SizedBox(
+                width: 40,
+                child: Image.asset('assets/avatars/Male_small_2.png'));
+          } else {
+            return SizedBox(
+                width: 40,
+                child: Image.asset('assets/avatars/Male_small_10.png'));
+          }
         }
       }
       // ignore: unrelated_type_equality_checks
-    } else if (gender == AvatarGender.male) {
+    } else if (gender == AvatarGender.female) {
       if (maturity == AvatarMaturity.teenager) {
         if (skinType == AvatarSkinType.black) {
           return SizedBox(
@@ -41,9 +63,19 @@ class AvatarSmall {
               width: 40,
               child: Image.asset('assets/avatars/Female_small_9.png'));
         } else {
-          return SizedBox(
-              width: 40,
-              child: Image.asset('assets/avatars/Female_small_6.png'));
+          if (haircolor == Avatarhaircolor.black) {
+            return SizedBox(
+                width: 40,
+                child: Image.asset('assets/avatars/Female_small_6.png'));
+          } else if (haircolor == Avatarhaircolor.lightbrown) {
+            return SizedBox(
+                width: 40,
+                child: Image.asset('assets/avatars/Female_small_7.png'));
+          } else {
+            return SizedBox(
+                width: 40,
+                child: Image.asset('assets/avatars/Female_small_8.png'));
+          }
         }
       } else {
         if (skinType == AvatarSkinType.black) {
@@ -55,9 +87,19 @@ class AvatarSmall {
               width: 40,
               child: Image.asset('assets/avatars/Female_small_4.png'));
         } else {
-          return SizedBox(
-              width: 40,
-              child: Image.asset('assets/avatars/Female_small_1.png'));
+          if (haircolor == Avatarhaircolor.black) {
+            return SizedBox(
+                width: 40,
+                child: Image.asset('assets/avatars/Female_small_1.png'));
+          } else if (haircolor == Avatarhaircolor.lightbrown) {
+            return SizedBox(
+                width: 40,
+                child: Image.asset('assets/avatars/Female_small_2.png'));
+          } else {
+            return SizedBox(
+                width: 40,
+                child: Image.asset('assets/avatars/Female_small_3.png'));
+          }
         }
       }
     } else //nuetral{}

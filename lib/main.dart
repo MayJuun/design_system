@@ -100,19 +100,27 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: const Text('small')),
               ],
             ),
-            // Visibility(
-            //     visible: isVisible,
-            //     child: Container(
-            //         child: AvatarLarge(
-            //       gender: AvatarGender.male,
-            //       skinType: AvatarSkinType.black,
-            //       maturity: AvatarMaturity.adult,
-            //     ))),
             Visibility(
                 visible: isVisible2,
-                child: AvatarMedium.avatar(AvatarGender.female,
-                    AvatarMaturity.adult, AvatarSkinType.brown)),
-            // Visibility(visible: isVisible3, child: AvatarSmall()),
+                child: AvatarSmall.avatar(
+                    AvatarGender.male,
+                    AvatarMaturity.teenager,
+                    AvatarSkinType.white,
+                    Avatarhaircolor.black)),
+            Visibility(
+                visible: isVisible2,
+                child: AvatarMedium.avatar(
+                    AvatarGender.male,
+                    AvatarMaturity.teenager,
+                    AvatarSkinType.white,
+                    Avatarhaircolor.black)),
+            Visibility(
+                visible: isVisible2,
+                child: AvatarLarge.avatar(
+                    AvatarGender.male,
+                    AvatarMaturity.teenager,
+                    AvatarSkinType.white,
+                    Avatarhaircolor.black)),
 
             //This is where we display any widget that we are working on.
             Container(
@@ -138,13 +146,14 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
 
             ButtonMedium.elevatedButtonComponent(
-                prefix: Icons.lock,
-                suffix: Icons.arrow_downward_outlined,
-                child: Text(
-                  'Medium',
-                  style: MayJuunType.label3(),
-                ),
-                onPressed: () {}),
+              prefix: Icons.lock,
+              suffix: Icons.arrow_downward_outlined,
+              child: Text(
+                'Medium',
+                style: MayJuunType.label3(),
+              ),
+              onPressed: () {},
+            ),
             const SizedBox(
               height: 30,
             ),
