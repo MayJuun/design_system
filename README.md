@@ -255,7 +255,7 @@ ElevatedButton(
 ```
 
 Say we want the small avatar size, then we will call the function small.
-Visibility(visible: isVisible3, child: const Small()),
+Visibility(visible: isVisible3, child: AvatarSmall.avatar()),
 
 note : Here we have been using the visibility widget
 
@@ -264,19 +264,27 @@ note : Here we have been using the visibility widget
 There are generally 3 sizes of avatars in the MDS which are namely:
 
 - Large avatars
-
+ To call an avatar with a male gender of white skincolor, lightbrown hair and teenage maturity, see below
+ 
 ```dart
-child: Image.asset('assets/avatars/Female_large_1.png'),
+AvatarLarge.avatar(
+  gender: AvatarGender.male,
+  skinType: AvatarSkintype.white,
+  maturity: AvatarMaturity.teenager,
+  haircolor : Avatarhaircolor.lightbrown); 
 ```
 
 - Medium avatars
 
 ```dart
- child: Image.asset('assets/avatars/Female_medium_1.png'),
+AvatarMedium.avatar(
+  gender: AvatarGender.male,
+  skinType: AvatarSkintype.black,
+  maturity: AvatarMaturity.teenager,
+  haircolor : Avatarhaircolor.lightbrown); //This wont be reflected as default haircolor is set for brown and black skin color
 ```
 
 - Small avatars
-  To call an avatar with a male gender of black color and teenage maturity, see below
 
 ```dart
 AvatarSmall.avatar(
@@ -285,7 +293,8 @@ AvatarSmall.avatar(
   maturity: AvatarMaturity.teenager);
 ```
 
-Note : MDS gives an option to select the type ( Male, female or nuetral) and size (large, medium or small) with a lot of flexibility.
+Note : MDS gives the user the flexibility to customise their own avatars on the basis of gendertype(male, female or nuetral), their age maturity(adult or teenager),skintype(white, brown or black). Also, an option is provided for haircolor(black,lightbrown,blonde) of skintype white while default black haircolor is set for the other skincolors.
+This helps to choose and create according to the individuals choices.
 
 >
 
