@@ -100,13 +100,14 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: const Text('small')),
               ],
             ),
+
             Visibility(
                 visible: isVisible2,
                 child: AvatarSmall.avatar(
                     AvatarGender.male,
                     AvatarMaturity.teenager,
                     AvatarSkinType.white,
-                    Avatarhaircolor.black)),
+                    Avatarhaircolor.blonde)),
             Visibility(
                 visible: isVisible2,
                 child: AvatarMedium.avatar(

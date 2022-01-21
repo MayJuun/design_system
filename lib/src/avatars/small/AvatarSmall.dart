@@ -24,8 +24,10 @@ class AvatarSmall {
                 child: Image.asset('assets/avatars/Male_small_6.png'));
           } else {
             return SizedBox(
-                width: 40,
-                child: Image.asset('assets/avatars/Male_small_7.png'));
+                height: 60,
+                child: Image.asset(
+                  'assets/avatars/Male_small_7.png',
+                ));
           }
         }
       } else {
