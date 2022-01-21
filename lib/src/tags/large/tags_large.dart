@@ -3,6 +3,7 @@ import 'package:mayjuun_design_system/src/tags/tag_enums.dart';
 import 'package:mayjuun_design_system/src/typography/typography.dart';
 import 'package:mayjuun_design_system/src/utils/consts.dart';
 import 'package:flutter/material.dart';
+import 'package:mayjuun_design_system/src/utils/icon_framer.dart';
 
 //TODO: Activate the selected and unselected tag
 
@@ -18,6 +19,7 @@ class TagsLarge extends StatefulWidget {
   final Color? color;
   final bool? dismissable;
   final String? child;
+  final Widget? icon;
   // final bool? isSelected;
   final void Function()? onCancel;
   final TagTypes? type;
@@ -25,6 +27,7 @@ class TagsLarge extends StatefulWidget {
   const TagsLarge({
     this.color,
     this.dismissable,
+    this.icon,
     // this.isSelected,
     this.onCancel,
     this.type,
@@ -85,11 +88,8 @@ class _TagsLargeState extends State<TagsLarge> {
             mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Icon(
-                Icons.brightness_high,
-                size: 20,
-              ),
-              SpaceConsts.horizontalOne,
+              widget.icon == null ? Container() : iconFramer(icon: widget.icon),
+              widget.icon == null ? Container() : SpaceConsts.horizontalOne,
               Text(widget.child!,
                   style: MayJuunType.label3().copyWith(
                     color: widget.color ?? LightThemeColors.backgroundPositive,

@@ -1,8 +1,12 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
 import 'package:mayjuun_design_system/mayjuun_design_system.dart';
-import 'package:mayjuun_design_system/src/avatars/large/large_avatar.dart';
-import 'package:mayjuun_design_system/src/avatars/medium/medium_avatar.dart';
-import 'package:mayjuun_design_system/src/avatars/small/small_avatar.dart';
+// ignore: unused_import
+import 'package:mayjuun_design_system/src/avatars/large/AvatarLarge.dart';
+import 'package:mayjuun_design_system/src/avatars/medium/AvatarMedium.dart';
+import 'package:mayjuun_design_system/src/avatars/small/AvatarSmall.dart';
+import 'package:mayjuun_design_system/src/enums/avartar.dart';
 import 'package:mayjuun_design_system/src/enums/form_input_type.dart';
 
 void main() {
@@ -96,9 +100,28 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: const Text('small')),
               ],
             ),
-            Visibility(visible: isVisible, child: const Large()),
-            Visibility(visible: isVisible2, child: const Medium()),
-            // Visibility(visible: isVisible3, child: const Small()),
+
+            Visibility(
+                visible: isVisible2,
+                child: AvatarSmall.avatar(
+                    AvatarGender.male,
+                    AvatarMaturity.teenager,
+                    AvatarSkinType.white,
+                    Avatarhaircolor.blonde)),
+            Visibility(
+                visible: isVisible2,
+                child: AvatarMedium.avatar(
+                    AvatarGender.male,
+                    AvatarMaturity.teenager,
+                    AvatarSkinType.white,
+                    Avatarhaircolor.black)),
+            Visibility(
+                visible: isVisible2,
+                child: AvatarLarge.avatar(
+                    AvatarGender.male,
+                    AvatarMaturity.teenager,
+                    AvatarSkinType.white,
+                    Avatarhaircolor.black)),
 
             //This is where we display any widget that we are working on.
             Container(
@@ -130,7 +153,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 'Medium',
                 style: MayJuunType.label3(),
               ),
-              onPressed: () => const Medium(),
+              onPressed: () {},
             ),
             const SizedBox(
               height: 30,
@@ -227,6 +250,7 @@ class _MyHomePageState extends State<MyHomePage> {
               color: Colors.purple,
               dismissable: true,
               type: TagTypes.outline,
+              icon: Icon(Icons.brightness_high),
               onCancel: () {
                 debugPrint('cancelled');
               },
