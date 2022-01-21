@@ -250,6 +250,7 @@ class _MyHomePageState extends State<MyHomePage> {
               color: Colors.purple,
               dismissable: true,
               type: TagTypes.outline,
+              icon: Icon(Icons.brightness_high),
               onCancel: () {
                 debugPrint('cancelled');
               },

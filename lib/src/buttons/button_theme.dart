@@ -9,14 +9,16 @@ class MayJuunButtonTheme {
   ///have more flexiblity over your elevated button.
   ///Subsequently, you can call ```ButtonSmall.elevatedButtonComponent()```, ```ButtonMedium.elevatedButtonComponent()```,
   /// or ```ButtonLarge.elevatedButtonComponent()``` to have the desired and pre-fedefined button size
-  static ElevatedButtonThemeData elevatedButtonTheme({Color? buttonColor}) {
+  static ElevatedButtonThemeData elevatedButtonTheme(
+      {Color? buttonColor, TextStyle? textStyle}) {
     return ElevatedButtonThemeData(
       style: ButtonStyle(
         mouseCursor:
             MaterialStateProperty.all<MouseCursor>(SystemMouseCursors.click),
         enableFeedback: true,
         // shape: MaterialStateProperty.all<OutlinedBorder>(const CircleBorder()),
-        textStyle: MaterialStateProperty.all<TextStyle>(MayJuunType.label3()),
+        textStyle: MaterialStateProperty.all<TextStyle>(
+            textStyle ?? MayJuunType.label3()),
         foregroundColor:
             MaterialStateProperty.all<Color>(LightThemeColors.contentPrimary),
         backgroundColor: MaterialStateProperty.all<Color>(
