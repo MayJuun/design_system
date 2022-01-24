@@ -78,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         isVisible = !isVisible;
                       });
                     },
-                    child: const Text('large')),
+                    child: const Text('small')),
                 Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: ElevatedButton(
@@ -97,11 +97,11 @@ class _MyHomePageState extends State<MyHomePage> {
                         isVisible3 = !isVisible3;
                       });
                     },
-                    child: const Text('small')),
+                    child: const Text('large')),
               ],
             ),
             Visibility(
-                visible: isVisible2,
+                visible: isVisible,
                 child: AvatarSmall.avatar(
                     AvatarGender.male,
                     AvatarMaturity.teenager,
@@ -115,7 +115,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     AvatarSkinType.white,
                     Avatarhaircolor.black)),
             Visibility(
-                visible: isVisible2,
+                visible: isVisible3,
                 child: AvatarLarge.avatar(
                     AvatarGender.male,
                     AvatarMaturity.teenager,
