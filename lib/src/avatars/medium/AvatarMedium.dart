@@ -5,7 +5,7 @@ import 'package:mayjuun_design_system/src/enums/avartar.dart';
 class AvatarMedium {
   static Widget avatar(AvatarGender gender, AvatarMaturity maturity,
       AvatarSkinType skinType, Avatarhaircolor haircolor) {
-    const number = 60.00;
+    const number = 40.00;
     if (gender == AvatarGender.male) {
       if (maturity == AvatarMaturity.teenager) {
         if (skinType == AvatarSkinType.black) {
