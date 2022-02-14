@@ -63,7 +63,7 @@ flutter:
 
     - family: Inter-Semibold
       fonts:
-        - asset: assets/fonts/Inter-Semibold.ttf
+        - asset: assets/fonts/Inter-SemiBold.ttf
 
     - family: Inter-Medium
       fonts:
