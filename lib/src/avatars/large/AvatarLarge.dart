@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mayjuun_design_system/src/enums/avartar.dart';
+import 'package:mayjuun_design_system/src/enums/avatar.dart';
 
 // ignore: avoid_classes_with_only_static_members
 class AvatarLarge {

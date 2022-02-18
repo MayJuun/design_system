@@ -1,1 +1,1 @@
-export 'src/all.convinience.dart';
+export 'src/all.convenience.dart';

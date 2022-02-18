@@ -1,4 +1,4 @@
-import 'package:mayjuun_design_system/src/colors/colors.convinience.dart';
+import 'package:mayjuun_design_system/src/colors/colors.convenience.dart';
 import 'package:mayjuun_design_system/src/tags/tag_enums.dart';
 import 'package:mayjuun_design_system/src/typography/typography.dart';
 import 'package:mayjuun_design_system/src/utils/consts.dart';

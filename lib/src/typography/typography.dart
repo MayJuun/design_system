@@ -1,4 +1,4 @@
-import 'package:mayjuun_design_system/src/colors/colors.convinience.dart';
+import 'package:mayjuun_design_system/src/colors/colors.convenience.dart';
 import 'package:flutter/material.dart';
 
 // ignore_for_file: avoid_classes_with_only_static_members
