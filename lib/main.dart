@@ -2,15 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:mayjuun_design_system/mayjuun_design_system.dart';
-import 'package:mayjuun_design_system/src/avatars/large/AvatarLarge.dart';
-import 'package:mayjuun_design_system/src/avatars/medium/AvatarMedium.dart';
-import 'package:mayjuun_design_system/src/avatars/small/AvatarSmall.dart';
-import 'package:mayjuun_design_system/src/enums/avatar.dart';
-import 'package:mayjuun_design_system/src/enums/form_input_type.dart';
-import 'package:mayjuun_design_system/src/tags/small/tags_small.dart';
-
-import 'mayjuun_design_system.dart';
-import 'src/tags/tags.convenience.dart';
 
 void main() {
   runApp(const MyApp());
@@ -253,7 +244,7 @@ class _MyHomePageState extends State<MyHomePage> {
               color: Colors.purple,
               dismissable: true,
               type: TagTypes.outline,
-              icon: Icon(Icons.brightness_high),
+              icon: const Icon(Icons.brightness_high),
               onCancel: () {
                 debugPrint('cancelled');
               },
