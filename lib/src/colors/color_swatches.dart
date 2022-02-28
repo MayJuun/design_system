@@ -115,36 +115,30 @@ class ColorSwatches {
   });
 
 //COLOR black//
-  MaterialColor blackSwatch = MaterialColor(
-    0xFFFFFFFF,
-    <int, Color>{
-      50: ColorCodes.BLK100,
-      100: ColorCodes.BLK100,
-      200: ColorCodes.BLK100,
-      300: ColorCodes.BLK200,
-      400: ColorCodes.BLK200,
-      500: ColorCodes.BLK200,
-      600: ColorCodes.BLK200,
-      700: ColorCodes.BLK300,
-      800: ColorCodes.BLK300,
-      900: ColorCodes.BLK300,
-    },
-  );
+  MaterialColor blackSwatch = MaterialColor(0xFFFFFFFF, <int, Color>{
+    50: ColorCodes.BLK100,
+    100: ColorCodes.BLK100,
+    200: ColorCodes.BLK100,
+    300: ColorCodes.BLK200,
+    400: ColorCodes.BLK200,
+    500: ColorCodes.BLK200,
+    600: ColorCodes.BLK200,
+    700: ColorCodes.BLK300,
+    800: ColorCodes.BLK300,
+    900: ColorCodes.BLK300,
+  });
 
 //COLOR white/
-  MaterialColor whiteSwatch = MaterialColor(
-    0xFFFFFFFF,
-    <int, Color>{
-      50: ColorCodes.WHT,
-      100: ColorCodes.WHT,
-      200: ColorCodes.WHT,
-      300: ColorCodes.WHT,
-      400: ColorCodes.WHT,
-      500: ColorCodes.WHT,
-      600: ColorCodes.WHT,
-      700: ColorCodes.WHT,
-      800: ColorCodes.WHT,
-      900: ColorCodes.WHT,
-    },
-  );
+  MaterialColor whiteSwatch = MaterialColor(0xFFFFFFFF, <int, Color>{
+    50: ColorCodes.WHT,
+    100: ColorCodes.WHT,
+    200: ColorCodes.WHT,
+    300: ColorCodes.WHT,
+    400: ColorCodes.WHT,
+    500: ColorCodes.WHT,
+    600: ColorCodes.WHT,
+    700: ColorCodes.WHT,
+    800: ColorCodes.WHT,
+    900: ColorCodes.WHT,
+  });
 }
