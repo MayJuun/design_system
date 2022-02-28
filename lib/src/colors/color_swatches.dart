@@ -115,7 +115,7 @@ class ColorSwatches {
   });
 
 //COLOR black//
-  MaterialColor blackSwatch = MaterialColor(0xFFFFFFFF, <int, Color>{
+  static MaterialColor blackSwatch = MaterialColor(0xFFFFFFFF, <int, Color>{
     50: ColorCodes.BLK100,
     100: ColorCodes.BLK100,
     200: ColorCodes.BLK100,
@@ -129,7 +129,7 @@ class ColorSwatches {
   });
 
 //COLOR white/
-  MaterialColor whiteSwatch = MaterialColor(0xFFFFFFFF, <int, Color>{
+  static MaterialColor whiteSwatch = MaterialColor(0xFFFFFFFF, <int, Color>{
     50: ColorCodes.WHT,
     100: ColorCodes.WHT,
     200: ColorCodes.WHT,
