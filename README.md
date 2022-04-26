@@ -14,7 +14,7 @@ import 'package:mayjuun_design_system/mayjuun_design_system.dart';
 
 ### Docs & API
 
-Here is an example calling a small sized button with prefix and suffix Icons and stlying the text with a standard mayjuun typography.
+Here is an example calling a small sized button with prefix and suffix Icons and styling the text with a standard mayjuun typography.
 
 ```dart
 @override
@@ -49,7 +49,7 @@ The design system has a variety of colors that are implemented in two major ways
   @override
   Widget build(BuildContext context) {
   return Container(
-  height: 200, width: 100, color: ColorCodes.RED500;
+  height: 200, width: 100, color: ColorCodes.RED500);
   }
   ```
 
