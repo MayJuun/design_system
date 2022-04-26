@@ -1,9 +1,9 @@
 // ignore_for_file: avoid_classes_with_only_static_members
 
+import 'package:flutter/material.dart';
 import 'package:mayjuun_design_system/src/buttons/universal/round_button.dart';
 import 'package:mayjuun_design_system/src/buttons/universal/square_button.dart';
 import 'package:mayjuun_design_system/src/utils/consts.dart';
-import 'package:flutter/material.dart';
 
 class ButtonLarge {
   ///This function takes in params: [child] of type required widget,

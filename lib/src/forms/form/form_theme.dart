@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:mayjuun_design_system/mayjuun_design_system.dart';
-import 'package:mayjuun_design_system/src/enums/form_input_type.dart';
 
 class FormInputTheme {
   //params enabled color, focused Color, form themeMode,

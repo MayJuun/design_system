@@ -1,8 +1,8 @@
 // ignore_for_file: avoid_classes_with_only_static_members
 
-import 'package:mayjuun_design_system/src/typography/typography.dart';
-import 'package:mayjuun_design_system/src/colors/color_labels.dart';
 import 'package:flutter/material.dart';
+import 'package:mayjuun_design_system/src/colors/color_labels.dart';
+import 'package:mayjuun_design_system/src/typography/typography.dart';
 
 class MayJuunButtonTheme {
   ///This method should be used for your app's internal theme where you want to
