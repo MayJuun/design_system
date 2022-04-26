@@ -264,14 +264,14 @@ note : Here we have been using the visibility widget
 There are generally 3 sizes of avatars in the MDS which are namely:
 
 - Large avatars
- To call an avatar with a male gender of white skincolor, lightbrown hair and teenage maturity, see below
- 
+  To call an avatar with a male gender of white skincolor, lightbrown hair and teenage maturity, see below
+
 ```dart
 AvatarLarge.avatar(
   gender: AvatarGender.male,
   skinType: AvatarSkintype.white,
   maturity: AvatarMaturity.teenager,
-  haircolor : Avatarhaircolor.lightbrown); 
+  haircolor : Avatarhaircolor.lightbrown);
 ```
 
 - Medium avatars
@@ -393,6 +393,10 @@ Widget build(BuildContext context) {
   TagTypes type;
   ```
 
+  ```dart
+  Widget? icon;
+  ```
+
 ## Theming
 
 The MDS themes is surprisingly very minimal, and the reason for that is to ensure that users are able to be very flexbile with their own themes and design their apps to their specific taste while leveraging the widget/component based design system. On top of that, the MDS offers you a component based theming capabilities such that, you can pass the available theme components as parameters into your `ThemeData()` . It is also interesting to note that while you're configuring the internal theme of your app, the MDS already offers componenets such as color codes, Color labels and typography, which makes it easier and less repetitive for you. This is the main reason while the MDS was designed to have a relatively small and only important theming components.
@@ -422,6 +426,16 @@ Below are some themeing components that can used in your `ThemeData()` parameter
   ```
 
   > For theming, no parameters are required, because it is a more strict way of following the design system pixel for pixel.
+
+  #### `FormInputTheme.formTheme()` parameters
+
+  ```dart
+  Color? buttonColor
+  ```
+
+  ```dart
+  TextStyle? textStyle
+  ```
 
 - ### Form Theme (InputDecorationTheme)
 
